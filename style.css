@@ -1,0 +1,81 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'General sans';
+    color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 0 3rem;
+}
+#page1{
+    
+    width: 100%;
+    height: 100vh;
+}
+#head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    padding: 30px 0px;
+}
+#head a,#head h2{
+    text-decoration: none;
+    /* color: black; */
+    font-weight: 800;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+}
+#head a:hover{
+    cursor: grabbing;
+    text-decoration: underline;
+}
+#head h2:hover{
+    cursor: grabbing;
+    text-decoration: underline;
+}
+.line1{
+    padding: 0;
+    margin: 0;
+}
+#intropage{
+    width: 70%;
+    padding-top: 8rem;
+}
+#intropage h1{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 150px;
+    line-height: 8rem;
+}
+#intropage h1 span{
+    color: rgb(147, 147, 147);
+}
+#intropage h1 span:nth-child(2){
+    text-align: end;
+}
+.line3{
+    text-align: end;
+}
+.line3 h2{
+    color: rgb(255, 255, 255);
+    line-height: 4rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* #page2{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(78, 46, 46);
+} */
