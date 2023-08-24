@@ -1,3 +1,4 @@
+// for mouse custom cursor-------------------- 
 let innercursor=document.querySelector('.inner-cursor');
 let outercursor=document.querySelector('.outer-cursor');
 document.addEventListener('mousemove', moveCursor);
@@ -35,3 +36,32 @@ links2.forEach((val)=>{
         outercursor.classList.remove("groww");
     });
 });
+
+// for Sticky header------------------
+let header=document.getElementById("head");
+let sticky=header.offsetTop;
+window.onscroll=function(){
+    myScroll();
+}
+function myScroll(){
+    if(window.pageYOffset > sticky){
+        header.classList.add("sticky");
+    }
+    else{
+        header.classList.remove("sticky");
+    }
+}
+
+// for menu+ ---------------------------
+// let menu=document.getElementById("menu");
+// let headlink=document.getElementById("headlink");
+// menu.addEventListener("click", menuFunc);
+// function menuFunc(e){
+//     // headlink.innerHTML="";
+//     // e.preventDefault();
+//     headlink.innerHTML=`
+//     <a href="">About</a>
+//     <a href="">Education</a>
+//     <a href="">Projects</a>
+//     `;
+// }
