@@ -25,9 +25,9 @@ html,body{
     z-index: 1000;
 }
 .inner-cursor.grow{
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
+    width: 90px;
+    height: 90px;
+    background-color: white;
     /* mix-blend-mode: difference; */
     transition: width 0.5s, height 0.5s;
     z-index: 1000;
@@ -35,7 +35,7 @@ html,body{
 .outer-cursor.groww{
     width: 70px;
     height: 70px;
-    border: 2px solid rgb(9, 5, 239);
+    border: 0px solid rgb(255, 255, 255);
     /* background-color: transparent; */
     /* mix-blend-mode: difference; */
     transition: width 0.5s, height 0.5s;

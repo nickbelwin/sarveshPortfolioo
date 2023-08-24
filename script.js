@@ -1,9 +1,11 @@
 // for mouse custom cursor-------------------- 
-let innercursor=document.querySelector('.inner-cursor');
-let outercursor=document.querySelector('.outer-cursor');
+let innercursor=document.querySelector('#cursor1');
+let outercursor=document.querySelector('#cursor2');
 document.addEventListener('mousemove', moveCursor);
 
 function moveCursor(e){
+    innercursor.classList.add("inner-cursor");
+    outercursor.classList.add("outer-cursor")
     let x=e.clientX;
     let y=e.clientY;
     console.log(x,y);
