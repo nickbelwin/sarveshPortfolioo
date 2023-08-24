@@ -130,7 +130,7 @@ html,body{
 #foot{
     position: absolute;
     bottom: 4%;
-    width: 93%;
+    width: 100%;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -141,6 +141,72 @@ html,body{
 }
 #foot h3:hover{
     text-decoration: underline;
+}
+@media (max-width: 520px){
+    #main{
+        width: 100%;
+    }
+    #page1{
+        padding: 0 5vw;
+    }
+    .inner-cursor{
+        display: none;
+    }
+    .outer-cursor{
+        display: none;
+    }
+    .line1 h1{
+        font-size: 15vw;
+        opacity: .6;
+    }
+    .line2{
+        width: fit-content;
+        text-align: right;
+    }
+    .line2 h1{
+        font-size: 15vw;
+        margin-left: 5vw;
+    }
+    #headingLine{
+        margin-top: 15vw;
+    }
+    .line2 h2{
+        font-size: 2.5vw;
+        line-height: 2;
+    }
+    #socialMedia{
+        margin-top: 10vw;
+        text-align: center;
+    }
+    #socialMedia a{
+        text-decoration: none;
+        border-bottom: 2px solid white;
+        margin-left: 3vw;
+        padding: 0;
+        background: none;
+    }   
+    #socialbar{
+        display: none;
+    }
+    /* #socialMedia a i{
+        background: none;
+        border-radius: 20px;
+    } */
+   
+    #socialMedia a:hover{
+        border-bottom: none;
+        /* padding: 0; */
+        /* background-color: white; */
+        /* box-shadow: 0 0 20px 0 white; */
+    }
+    #foot{
+        width: 95%;
+        bottom: 10%;
+    }
+    #foot div{
+        display: none;
+        
+    }
 }
 #page2{
     width: 100%;
