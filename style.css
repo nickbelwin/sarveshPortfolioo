@@ -102,9 +102,6 @@ html,body{
 .line2 h2{
     font-size: 1.5vw;
 }
-#socialMedia{
-    display: none;
-}
 #socialbar{
     position: fixed;
     top: 15rem;
@@ -157,7 +154,10 @@ html,body{
 #foot h3:hover{
     text-decoration: underline;
 }
-@media only screen and(max-width: 520px){
+#socialMedia{
+    display: none;
+}
+@media (max-width: 520px){
     #main{
         width: 100%;
     }
@@ -193,7 +193,9 @@ html,body{
         font-weight: 100;
     }
     #socialMedia{
-        margin-top: 10vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 30vw;
         text-align: center;
     }
     #socialMedia a{
@@ -220,6 +222,9 @@ html,body{
     #foot{
         width: 95%;
         bottom: 10%;
+    }
+    #foot h3{
+        font-size: 5vw;
     }
     #foot div{
         display: none;
