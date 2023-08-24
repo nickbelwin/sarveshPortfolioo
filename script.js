@@ -13,12 +13,25 @@ function moveCursor(e){
 }
 
 let links=Array.from(document.querySelectorAll("a"));
+let links2=Array.from(document.querySelectorAll("h3"));
 
 links.forEach((val)=>{
     val.addEventListener("mouseover",()=>{
         innercursor.classList.add("grow");
+        outercursor.classList.add("groww");
     });
     val.addEventListener("mouseout",()=>{
         innercursor.classList.remove("grow");
+        outercursor.classList.remove("groww");
     });
-})
+});
+links2.forEach((val)=>{
+    val.addEventListener("mouseover",()=>{
+        innercursor.classList.add("grow");
+        outercursor.classList.add("groww");
+    });
+    val.addEventListener("mouseout",()=>{
+        innercursor.classList.remove("grow");
+        outercursor.classList.remove("groww");
+    });
+});
