@@ -32,9 +32,10 @@ html,body{
     transition: width 0.5s, height 0.5s;
     z-index: 1000;
 }
+
 .outer-cursor.groww{
-    width: 70px;
-    height: 70px;
+    /* width: 70px;
+    height: 70px; */
     border: 0px solid rgb(255, 255, 255);
     /* background-color: transparent; */
     /* mix-blend-mode: difference; */
@@ -43,8 +44,8 @@ html,body{
 }
 .outer-cursor{
     position: fixed;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: 1px solid white;
     transform: translate(-50%, -50%);
@@ -122,6 +123,9 @@ html,body{
 #headingLine{
     margin-top: 5vw;
     line-height: 1;
+}
+.line1{
+    width: fit-content;
 }
 .line1 h1{
     font-size: 9vw;
