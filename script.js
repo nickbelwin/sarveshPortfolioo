@@ -54,15 +54,15 @@ function myScroll(){
 }
 
 // for menu+ ---------------------------
-// let menu=document.getElementById("menu");
-// let headlink=document.getElementById("headlink");
-// menu.addEventListener("click", menuFunc);
-// function menuFunc(e){
-//     // headlink.innerHTML="";
-//     // e.preventDefault();
-//     headlink.innerHTML=`
-//     <a href="">About</a>
-//     <a href="">Education</a>
-//     <a href="">Projects</a>
-//     `;
-// }
+let menu=document.getElementById("menu");
+let headlink=document.getElementById("headlink");
+menu.addEventListener("click", menuFunc);
+function menuFunc(e){
+    // headlink.innerHTML="";
+    // e.preventDefault();
+    headlink.innerHTML=`
+    <a href="">About</a>
+    <a href="">Education</a>
+    <a href="">Projects</a>
+    `;
+}
