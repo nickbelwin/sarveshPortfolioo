@@ -8,7 +8,7 @@ function moveCursor(e){
     outercursor.classList.add("outer-cursor")
     let x=e.clientX;
     let y=e.clientY;
-    console.log(x,y);
+    // console.log(x,y);
     innercursor.style.left=`${x}px`;
     innercursor.style.top=`${y}px`;
     outercursor.style.left=`${x}px`;
@@ -21,6 +21,7 @@ links.forEach((val)=>{
     val.addEventListener("mouseover",()=>{
         innercursor.classList.add("grow");
         outercursor.classList.add("groww");
+        
     });
     val.addEventListener("mouseout",()=>{
         innercursor.classList.remove("grow");
@@ -90,3 +91,44 @@ function scrollFunc(){
     console.log("val=>",val);
 }
 scrollFunc();
+
+let on=document.getElementById("onHover");
+let on2=document.getElementById("onHover2");
+let on3=document.getElementById("onHover3");
+let on4=document.getElementById("onHover4");
+let skill=document.querySelector(".skill");
+let skill2=document.querySelector(".skill2");
+let skill3=document.querySelector(".skill3");
+let skill4=document.querySelector(".skill4");
+console.log(skill);
+skill.addEventListener("mouseenter",()=>{
+    on.classList.add("skill_hover")
+});
+skill.addEventListener("mouseleave",()=>{
+    on.classList.remove("skill_hover")
+});
+skill2.addEventListener("mouseenter",()=>{
+    on2.classList.add("skill_hover")
+});
+skill2.addEventListener("mouseleave",()=>{
+    on2.classList.remove("skill_hover")
+});
+skill3.addEventListener("mouseenter",()=>{
+    on3.classList.add("skill_hover")
+});
+skill3.addEventListener("mouseleave",()=>{
+    on3.classList.remove("skill_hover")
+});
+skill4.addEventListener("mouseenter",()=>{
+    on4.classList.add("skill_hover")
+});
+skill4.addEventListener("mouseleave",()=>{
+    on4.classList.remove("skill_hover")
+});
+// skill.forEach((val)=>{
+//     console.log(val);
+//     val.addEventListener("mouseover",()=>{
+//         on.classList.add("skill_hover")
+//     });
+//     skill.addEventListener("")
+// })
