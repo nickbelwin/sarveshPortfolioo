@@ -74,6 +74,7 @@ html,body{
     right: 0;
     /* left: 0;
     right: 0; */
+    border: 2px solid rgb(0, 0, 0);
     width: 10px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
@@ -95,7 +96,7 @@ html,body{
     width: 10px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
-    filter: blur(1px);
+    filter: blur(0px);
 }
 #progressBar:after{
     content: '';
@@ -105,7 +106,7 @@ html,body{
     width: 10px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
-    filter: blur(4px);
+    filter: blur(0px);
 }
 #main{
     position: relative;
@@ -290,16 +291,17 @@ html,body{
     width: fit-content;
     /* padding: 6rem 2rem 2rem 2rem; */
     font-size: 3rem;
+    text-transform: uppercase;
     font-weight: 800;
 }
 .myImage{
-    width: 50%;
+    width: 40%;
     /* border: 2px solid red; */
     margin: 1rem;
     text-align: center;
 }
 .myImage img{
-    width: 60%;
+    width: 70%;
     /* height: 50vh; */
     object-fit: cover;
 }
@@ -348,7 +350,7 @@ html,body{
     width: 50%;
     margin-bottom: 1.5rem;
     border-radius: 6px;
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(41, 41, 41);
     transition: 0.4s;
 }
 .timeline_box:hover{
@@ -362,7 +364,7 @@ html,body{
     width: 50px;
     border-radius: 50%;
     right: -23px;
-    top: 32px;
+    top: 50px;
     z-index: 1;
 }
 .right_box img{
@@ -451,6 +453,7 @@ html,body{
     /* padding: 6rem 2rem 2rem 2rem; */
     font-size: 3rem;
     font-weight: 800;
+    text-transform: uppercase;
 }
 .skill{
     position: relative;
