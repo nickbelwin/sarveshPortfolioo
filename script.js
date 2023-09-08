@@ -16,7 +16,7 @@ function moveCursor(e){
 }
 
 let links=Array.from(document.querySelectorAll("a"));
-let links2=Array.from(document.querySelectorAll("h3"));
+let links2=Array.from(document.querySelectorAll(".bold"));
 links.forEach((val)=>{
     val.addEventListener("mouseover",()=>{
         innercursor.classList.add("grow");
@@ -37,14 +37,14 @@ links2.forEach((val)=>{
         outercursor.classList.remove("groww");
     });
 });
-
-// for Sticky header------------------
+// srollbar custom=================================
 let header=document.getElementById("head");
 let sticky=header.offsetTop;
-window.onscroll=function(){
-    myScroll();
-}
-function myScroll(){
+let progress=document.getElementById("progressBar");
+let totalHeight=document.body.scrollHeight - window.innerHeight;
+window.onscroll= function(){
+    let progressHeight=(window.pageYOffset / totalHeight)*100;
+    progress.style.height=progressHeight+ "%";
     if(window.pageYOffset > sticky){
         header.classList.add("sticky");
     }
@@ -52,6 +52,21 @@ function myScroll(){
         header.classList.remove("sticky");
     }
 }
+
+// for Sticky header------------------
+// let header=document.getElementById("head");
+// let sticky=header.offsetTop;
+// window.onscroll=function(){
+//     myScroll();
+// }
+// function myScroll(){
+//     if(window.pageYOffset > sticky){
+//         header.classList.add("sticky");
+//     }
+//     else{
+//         header.classList.remove("sticky");
+//     }
+// }
 
 // for menu+ ---------------------------
 let menu=document.getElementById("menu");
@@ -66,3 +81,12 @@ function menuFunc(e){
     <a href="">Projects</a>
     `;
 }
+
+// on scroll -----------------------------------
+document.addEventListener("scroll", scrollFunc);
+
+function scrollFunc(){
+    let val= innerHeight/5*4;
+    console.log("val=>",val);
+}
+scrollFunc();
