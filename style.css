@@ -326,11 +326,12 @@ html,body{
     margin: 1rem;
     
 }
-.about_info p, .about_info h3{
+.about_info h3{
+    opacity: .6;
+    text-transform: uppercase;
+}
+.about_info p{
     font-size: 1.5rem;
-    font-family: "General Sans Medium";
-    /* font-weight: 200; */
-    opacity: .9;
 }
 .about_box{
     display: flex;
@@ -466,6 +467,12 @@ html,body{
     padding-top: 200px;
     color: white;
 }
+#page4 h1:nth-child(1){
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
 .project_elements{
     position: relative;
     width: 100%;
@@ -477,14 +484,15 @@ html,body{
     justify-content: space-between;
     align-items: center;
 }
-/* .project_elements:hover{
-    background-color: rgb(252, 252, 252);
-} */
+
 .project_elements h1{
-    font-size: 6vw;
+    font-size: 4vw;
+    text-transform: uppercase;
+    opacity: .6;
 }
 .project_elements h2{
     font-size: .8rem;
+    opacity: .6;
 }
 .project_img{
     display: none;
@@ -651,8 +659,10 @@ html,body{
     .about_info{
         width: 100%;
         margin: 0;
-        font-size: 1rem;
         font-weight: 0;
+    }
+    .about_info p{
+        font-size: 1rem;
     }
     .myImage img{
         width: 10rem;
@@ -736,5 +746,9 @@ html,body{
         border-bottom: 15px solid transparent;
         border-right: 15px solid white;
         left: -14px;
+    }
+
+    #page4{
+        padding: 2rem;
     }
 }
