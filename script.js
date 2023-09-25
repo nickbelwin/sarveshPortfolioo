@@ -194,6 +194,13 @@ function pageAnimation(){
         duration: 1.5,
         ease: Expo.easeInOut
     })
+    .from("#socialMedia",{
+        y: '-10',
+        opacity: 0,
+        delay: -1,
+        duration: 1.5,
+        ease: Expo.easeInOut
+    })
 }
 pageAnimation();
 
