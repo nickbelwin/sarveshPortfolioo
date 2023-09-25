@@ -13,6 +13,27 @@ html,body{
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
 }
+/* #cursor1{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 9999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+} */
+/* #cursor2{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+} */
+.cursor{
+    display: none;
+}
 .inner-cursor{
     position: fixed;
     width: 10px;
@@ -62,7 +83,7 @@ html,body{
     z-index: 12;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 10px;
     height: 100%;
     background-color: rgba(59, 59, 59, 0);
@@ -71,11 +92,11 @@ html,body{
     z-index: 12;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     /* left: 0;
     right: 0; */
     border: 2px solid rgb(0, 0, 0);
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
     animation: animate 5s linear infinite;
@@ -93,7 +114,7 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
     filter: blur(0px);
@@ -103,7 +124,7 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: linear-gradient(to top, #008aff,#00ffe7);
     filter: blur(0px);
@@ -119,9 +140,10 @@ html,body{
     background-color: rgb(0, 0, 0);
     position: relative;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     /* margin-top: 10vw; */
     padding: 0 2rem;
+    padding-bottom: 3rem;
 }
 .heading{
     position: absolute;
@@ -175,7 +197,24 @@ html,body{
     color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 2px;
+    /* opacity: 0; */
+    /* animation: slideDown .8s ease forwards;
+    animation-delay: .1s; */
 }
+/* @keyframes slideDown{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    /* 50%{
+        transform: translateY(-10px);
+        opacity: 0.5;
+    } */
+    /* 100%{
+        transform: translateY(0);
+        opacity: 1;
+    } */
+
 
 #head a:hover{
     
@@ -187,17 +226,28 @@ html,body{
 #headingLine{
     padding-top: 10rem;
     line-height: 1;
+    padding-bottom: 18rem;
+    /* margin-bottom: 5rem; */
 }
 .line1{
     width: fit-content;
+    overflow: hidden;
+    /* background-color: #00ffe7; */
+}
+.line1 .line_tag{
+    transform: translateY(102%);
+}
+.line2 .line_tag{
+    transform: translateY(129%);
 }
 .line1 h1{
     font-size: 9vw;
-    opacity: .6;
+    opacity: .5;
     font-family: "General Sans Medium";
-    font-weight: 600;
+    font-weight: 400;
 }
 .line2{
+    overflow: hidden;
     width: fit-content;
     text-align: right;
     
@@ -205,9 +255,9 @@ html,body{
 .line2 h1{
     font-size: 9vw;
     margin-left: 210px;
-    opacity: .6;
+    opacity: .5;
     font-family: "General Sans Medium";
-    font-weight: 600;
+    font-weight: 400;
 }
 .line2 h2{
     font-size: 1.4vw;
@@ -256,7 +306,7 @@ html,body{
 }
 #foot{
     overflow-x: hidden !important;
-    position: absolute;
+    /* position: absolute; */
     bottom: 4%;
     width: 93%;
     align-items: center;
@@ -326,12 +376,14 @@ html,body{
     margin: 1rem;
     
 }
+
 .about_info h3{
     opacity: .6;
     text-transform: uppercase;
 }
 .about_info p{
     font-size: 1.5rem;
+    overflow: hidden;
 }
 .about_box{
     display: flex;
@@ -376,7 +428,7 @@ html,body{
     width: 50%;
     margin-bottom: 1.5rem;
     border-radius: 6px;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(0, 0, 0);
     transition: 0.4s;
 }
 .timeline_box:hover{
@@ -469,15 +521,17 @@ html,body{
 }
 #page4 h1:nth-child(1){
     font-size: 3rem;
+    margin-left: 2rem;
     letter-spacing: 4px;
     margin-bottom: 4rem;
     text-transform: uppercase;
 }
-.project_elements{
+.projectelements{
+    cursor: pointer;
     position: relative;
     width: 100%;
     padding: 3.5vw 3vw;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(153, 153, 153);
     text-transform: uppercase;
     transition: .5s;
     display: flex;
@@ -485,18 +539,21 @@ html,body{
     align-items: center;
 }
 
-.project_elements h1{
+.projectelements h1{
+    cursor: pointer;
     font-size: 4vw;
     text-transform: uppercase;
     opacity: .6;
 }
-.project_elements h2{
+.projectelements h2{
     font-size: .8rem;
     opacity: .6;
 }
-.project_img{
-    display: none;
+.projectelements img{
+    /* display: none; */
+    opacity: 0;
     position: absolute;
+    z-index: 20;
 }
 /* --------------------------Page5------------------------ */
 
@@ -552,12 +609,19 @@ html,body{
 }
 .skill_hover{
     position: absolute;
+    overflow: scroll;
     height: 100%;
     width: 100%;
     border-radius: 10px;
     background-color: rgb(102, 102, 102);
-    opacity: .8;
+    /* opacity: .8; */
+    text-align: justify;
     transition: .5s;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.skill_hover img{
+    width: 3rem;
 }
 @media (max-width: 1120px){
     .about_info{
@@ -577,6 +641,7 @@ html,body{
     }
     .heading{
         padding: 10px 25px;
+        width: 100%;
         background-color: black;
     }
     #page1{
@@ -602,6 +667,8 @@ html,body{
     }
     #headingLine{
         padding-top: 10rem;
+    
+        padding-bottom: 0;
     }
     .line2 h2{
         font-size: 2.5vw;
@@ -614,6 +681,7 @@ html,body{
         display: flex;
         justify-content: center;
         margin-top: 30vw;
+        margin-bottom: 50vw;
         text-align: center;
     }
     #socialMedia a{
@@ -630,7 +698,9 @@ html,body{
         background: none;
         border-radius: 20px;
     } */
-   
+    /* #socialMedia{
+        padding-top: 23rem;
+    } */
     #socialMedia a:hover{
         border-bottom: none;
         /* padding: 0; */
@@ -638,8 +708,10 @@ html,body{
         /* box-shadow: 0 0 20px 0 white; */
     }
     #foot{
-        width: 95%;
-        bottom: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* bottom: 10%; */
     }
     #foot h3{
         font-size: 5vw;
@@ -750,5 +822,15 @@ html,body{
 
     #page4{
         padding: 2rem;
+    }
+    .projectelements{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .projectelements h1{
+        font-size: 2rem;
+    }
+    .projectelements img{
+        display: none;
     }
 }

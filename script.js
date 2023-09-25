@@ -1,3 +1,11 @@
+// function follower(){
+//     window.addEventListener("mousemove", function(e){
+//         document.querySelector("#cursor1").style.transform = `translate(${e.clientX}px , ${e.clientY}px)`;
+//         document.querySelector("#cursor2").style.transform = `translate(${e.clientX}px , ${e.clientY}px)`;
+//     })
+// }
+// follower();
+
 // for mouse custom cursor-------------------- 
 let innercursor = document.querySelector('#cursor1');
 let outercursor = document.querySelector('#cursor2');
@@ -104,28 +112,51 @@ let skill3 = document.querySelector(".skill3");
 let skill4 = document.querySelector(".skill4");
 console.log(skill);
 skill.addEventListener("mouseenter", () => {
-    on.classList.add("skill_hover")
+    on.innerHTML=`<p>HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. </p>
+    <img src="./media/html-5.png" width="20px" alt="">`;
+    on.classList.add("skill_hover");
 });
 skill.addEventListener("mouseleave", () => {
+    on.innerHTML="";
     on.classList.remove("skill_hover")
 });
 skill2.addEventListener("mouseenter", () => {
-    on2.classList.add("skill_hover")
+    on2.classList.add("skill_hover");
+    on2.innerHTML=`<p>CSS stands for Cascading Style Sheets
+    CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files</p>
+    <img src="./media/css-3.png" width="10px" alt="">`
 });
 skill2.addEventListener("mouseleave", () => {
-    on2.classList.remove("skill_hover")
+    on2.classList.remove("skill_hover");
+    on2.innerHTML=""
 });
 skill3.addEventListener("mouseenter", () => {
-    on3.classList.add("skill_hover")
+    on3.classList.add("skill_hover");
+    on3.innerHTML=`<p>
+    JavaScript is the Programming Language for the Web.
+    JavaScript can update and change both HTML and CSS.
+    JavaScript can calculate, manipulate and validate data.
+</p>
+<img src="./media/js.png" alt="">`
 });
 skill3.addEventListener("mouseleave", () => {
-    on3.classList.remove("skill_hover")
+    on3.classList.remove("skill_hover");
+    on3.innerHTML="";
 });
 skill4.addEventListener("mouseenter", () => {
-    on4.classList.add("skill_hover")
+    on4.classList.add("skill_hover");
+    on4.innerHTML=`<p>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
+    It is easy to learn and simple to use
+    It is open-source and free
+    It is secure, fast and powerful
+    It has a huge community support (tens of millions of developers)</p>
+    <img src="./media/java.png" alt="">`;
 });
 skill4.addEventListener("mouseleave", () => {
-    on4.classList.remove("skill_hover")
+    on4.classList.remove("skill_hover");
+    on4.innerHTML="";
 });
 // skill.forEach((val)=>{
 //     console.log(val);
@@ -134,3 +165,58 @@ skill4.addEventListener("mouseleave", () => {
 //     });
 //     skill.addEventListener("")
 // })
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
+
+// first page animation------------------------
+function pageAnimation(){
+    let headTag= gsap.timeline();
+    headTag.from("#head", {
+        y: '-10',
+        opacity: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut
+    })
+    .to(".line_tag",{
+        y: 0,
+        duration: 2,
+        delay: -1,
+        ease: Expo.easeInOut,
+        stagger: .3
+    })
+    .from("#foot", {
+        y: '-10',
+        opacity: 0,
+        delay: -1,
+        duration: 1.5,
+        ease: Expo.easeInOut
+    })
+}
+pageAnimation();
+
+document.querySelectorAll(".projectelements").forEach((val)=>{
+    val.addEventListener("mousemove", function(e){
+        var diff= e.clientY - val.getBoundingClientRect().top;
+        gsap.to(val.querySelector("img"),{
+            opacity:1,
+            ease: Power1,
+            top: diff,
+            left: e.clientX
+        })
+    })
+    val.addEventListener("mouseout", function(e){
+        let diff= e.clientY - val.getBoundingClientRect().top;
+        gsap.to(val.querySelector("img"),{
+            opacity:0,
+            ease: Power1,
+            top:diff,
+            left: e.clientX
+        })
+    })
+});
+document.getElementById("spotifyclone").addEventListener("click", (e)=>{
+    window.location.href="https://nickbelwin.github.io/spotifyclone";
+})
