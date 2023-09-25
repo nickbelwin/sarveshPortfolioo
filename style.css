@@ -634,7 +634,6 @@ html,body{
     justify-content: space-evenly;
     padding: 10rem 2rem;
     /* height: 90vh; */
-    cursor: pointer;
     background-color: black;
     color: white;
 }
@@ -670,11 +669,14 @@ html,body{
     flex-direction: column;
 }
 .inputbox input, .inputbox textarea{
+    color: white;
     margin: 1rem 0;
     margin-bottom: 2rem;
     padding: .5rem;
     border-radius: 5px;
+    /* height: 4rem; */
     width: 29rem;
+    font-size: 1rem;
     background: transparent;
     border: 0;
     border-bottom: 2px solid white;
@@ -683,9 +685,12 @@ html,body{
 .inputbox a{
     text-decoration: none;
     color: white;
+    
 }
 .inputbox a:hover{
-    text-decoration: underline;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    cursor: pointer;
 }
 
 /*--------------footer-----------------------------*/
@@ -918,11 +923,15 @@ html,body{
         padding: 5rem 2rem;
     }
     .contact-Left{
-        font-size: 2rem;
+        font-size: 1rem;
+       
     }
     .contact-Left h1{
-
+        display: contents;
         margin-bottom: 2rem;
+    }
+    .contactMe{
+        margin-top: 3rem;
     }
     .contactMe a{
         margin: 2rem 1rem;
@@ -938,6 +947,7 @@ html,body{
     }
     .inputbox input, .inputbox textarea{
         width: 88vw;
+        font-size: 1rem;
     }
     .inputbox a{
         text-decoration: none;

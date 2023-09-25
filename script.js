@@ -226,4 +226,7 @@ document.querySelectorAll(".projectelements").forEach((val)=>{
 });
 document.getElementById("spotifyclone").addEventListener("click", (e)=>{
     window.location.href="https://nickbelwin.github.io/spotifyclone";
-})
+});
+document.getElementById("loginpage").addEventListener("click", (e)=>{
+    window.location.href="https://nickbelwin.github.io/spotifyclone/html/loginPage.html";
+});
