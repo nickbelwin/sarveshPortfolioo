@@ -165,7 +165,7 @@ html,body{
     /* width: 93%; */
     /* margin-top: 100px; */
     /* mix-blend-mode: difference; */
-    padding: 25px 25px;
+    padding: 6px 25px;
     z-index: 10;
     /* background-color: rgba(88, 67, 67, 0); */
 }
@@ -183,7 +183,7 @@ html,body{
     position: fixed !important;
     /* background-color: rgb(0, 0, 0); */
     top: 0;
-    padding: 5px 25px;
+    /* padding: 5px 25px; */
 }
 #head a,#head h3{
     text-decoration: none;
@@ -224,7 +224,7 @@ html,body{
 #headingLine{
     padding-top: 10rem;
     line-height: 1;
-    padding-bottom: 18rem;
+    padding-bottom: 11rem;
     /* margin-bottom: 5rem; */
 }
 .line1{
@@ -314,6 +314,10 @@ html,body{
 #foot h3{
     font-size: 1rem;
     cursor: pointer;
+}
+#foot h3 a{
+    text-decoration: none;
+    color: white;
 }
 #foot h3:hover{
     text-decoration: underline;
@@ -727,6 +731,7 @@ html,body{
     }
     #page1{
         padding: 0 5vw;
+        height: 100vh;
     }
     .inner-cursor{
         display: none;
@@ -762,7 +767,7 @@ html,body{
         display: flex;
         justify-content: center;
         margin-top: 30vw;
-        margin-bottom: 50vw;
+        margin-bottom: 71vw;
         text-align: center;
     }
     #socialMedia a{
