@@ -372,7 +372,7 @@ html,body{
     border-radius: 30rem;
 }
 .about_info{
-    width: 50%;
+    width: 40%;
     /* height: 80vh; */
     /* border: 2px solid red; */
     margin: 1rem;
@@ -397,6 +397,12 @@ html,body{
     /* display: grid;
     grid-template-columns: 1fr 1fr;*/
     text-align: justify;
+}
+.about_info p{
+    margin-bottom: 2rem;
+}
+.about_info h2 span{
+    color: grey;
 }
 /*------------------------Page3-------------------*/
 #page3{
@@ -687,7 +693,8 @@ html,body{
     
 }
 .inputbox a:hover{
-    border-bottom: 1px solid white;
+    text-decoration: underline;
+    /* border-bottom: 1px solid white; */
     width: fit-content;
     cursor: pointer;
 }
@@ -697,14 +704,16 @@ html,body{
 #footer{
     padding: 1rem;
     text-align: center;
-    background-color: rgb(40, 39, 39);
+    border-top: 1px solid blue;
+    background-color: rgb(238, 233, 233);
     /* border-top: 1px solid white; */
 }
 #footer p{
-    color: white;
+    color: rgb(14, 12, 12);
     font-family: 'General Sans Medium';
 }
 #footer span{
+    font-family: 'General Sans Medium';
     color: blue;
     margin: 0 3px;
 }
@@ -820,6 +829,9 @@ html,body{
         font-weight: 0;
     }
     .about_info p{
+        font-size: 1rem;
+    }
+    .about_info h2{
         font-size: 1rem;
     }
     .myImage img{
@@ -953,6 +965,6 @@ html,body{
         text-decoration: none;
         color: white;
         font-size: 1rem;
-        text-align: center;
+        /* text-align: center; */
     }
 }
