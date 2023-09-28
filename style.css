@@ -517,12 +517,18 @@ html,body{
 /* --------------------------Page4------------------------ */
 
 #page4{
-    width: 100%;
-    /* height: 100vh; */
+    /* width: 100%;
     background-color: rgb(0, 0, 0);
     padding-right: 10vw;
     padding-top: 200px;
-    color: white;
+    color: white; */
+    color: #fff;
+    padding-right: 10vw;
+    padding-top: 200px;
+    background-color: black;
+    width: 100%;
+    /* height: 100vh; */
+    /* padding-bottom: 80rem; */
 }
 #page4 h1:nth-child(1){
     font-size: 3rem;
@@ -532,7 +538,7 @@ html,body{
     text-transform: uppercase;
 }
 .projectelements{
-    cursor: pointer;
+    /* cursor: pointer;
     position: relative;
     width: 100%;
     padding: 3.5vw 3vw;
@@ -541,14 +547,27 @@ html,body{
     transition: .5s;
     display: flex;
     justify-content: space-between;
+    align-items: center; */
+    cursor: pointer;
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    border-top: 1px solid #888;
 }
 
 .projectelements h1{
-    cursor: pointer;
+    /* cursor: pointer;
     font-size: 4vw;
     text-transform: uppercase;
-    opacity: .6;
+    opacity: .6; */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 4vw;
+    opacity: .7;
 }
 .projectelements h2{
     font-size: .8rem;
@@ -556,20 +575,30 @@ html,body{
 }
 .projectelements img{
     /* display: none; */
-    width: 40%;
+    /* width: 40%;
     opacity: 0;
     position: absolute;
-    z-index: 20;
+    z-index: 20; */
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.elemlast{
+    border-bottom: 1px solid #888;
 }
 /* --------------------------Page5------------------------ */
 
 #page5{
     width: 100%;
-    padding: 3rem 0;
+    padding: 12rem 0;
     /* height: 100vh; */
     color: white;
     background-color: rgb(0, 0, 0);
-    padding-bottom: 5rem;
+    
 }
 .skill_box{
     display: flex;
@@ -637,10 +666,11 @@ html,body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 10rem 2rem;
+    padding: 0rem 2rem;
     /* height: 90vh; */
     background-color: black;
     color: white;
+    padding-bottom: 8rem;
 }
 .contact-Left{
     font-size: 5vw;
@@ -920,6 +950,7 @@ html,body{
 
     #page4{
         padding: 2rem;
+        
     }
     .projectelements{
         padding-top: 2rem;
@@ -930,6 +961,10 @@ html,body{
     }
     .projectelements img{
         display: none;
+    }
+
+    #page5{
+        padding: 2rem 0;
     }
     #page6{
         padding: 5rem 2rem;
