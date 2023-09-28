@@ -146,6 +146,14 @@ html,body{
     padding: 0 2rem;
     padding-bottom: 3rem;
 }
+#head a{
+    display: flex;
+    align-items: center;
+}
+#head a img{
+    width: 40px;
+    border-radius: 50%;
+}
 .heading{
     position: absolute;
     top: 0;
