@@ -230,3 +230,9 @@ document.getElementById("spotifyclone").addEventListener("click", (e)=>{
 document.getElementById("loginpage").addEventListener("click", (e)=>{
     window.location.href="https://nickbelwin.github.io/spotifyclone/html/loginPage.html";
 });
+document.getElementById("typingGame").addEventListener("click", (e)=>{
+    window.location.href="https://nickbelwin.github.io/typingGame/";
+});
+document.getElementById("tictactoe").addEventListener("click", (e)=>{
+    window.location.href="https://nickbelwin.github.io/TicTacToeGame/";
+});

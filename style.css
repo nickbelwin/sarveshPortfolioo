@@ -161,17 +161,6 @@ html,body{
     z-index: 10;
     /* background-color: rgba(88, 67, 67, 0); */
 }
-#header{
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 96%; */
-    /* width: 93%; */
-    /* padding: 25px 0px;
-    z-index: 10;
-    background-color: black; */
-}
 .headLinks{
     /* width: 40%; */
     display: flex;
@@ -431,9 +420,6 @@ html,body{
     border-radius: 6px;
     background-color: rgb(0, 0, 0);
     transition: 0.4s;
-}
-.timeline_box:hover{
-    /* background-color: white; */
 }
 .timeline_text_box:hover{
     transform: scale(1.030);
