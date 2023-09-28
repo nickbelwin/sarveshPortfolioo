@@ -9,9 +9,9 @@
 html,body{
     width: 100%;
     height: 100%;
-    background-color: rgb(12, 190, 137);
+    background-color: rgb(0, 0, 0);
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 1rem;
 }
 /* #cursor1{
     position: absolute;
@@ -149,8 +149,10 @@ html,body{
 #head a{
     display: flex;
     align-items: center;
+    border-radius: 50%;
 }
 #head a img{
+    cursor: pointer;
     width: 40px;
     border-radius: 50%;
 }
@@ -162,6 +164,7 @@ html,body{
     align-items: center;
     justify-content: space-between;
     width: 99%;
+    background-color: transparent;
     /* width: 93%; */
     /* margin-top: 100px; */
     /* mix-blend-mode: difference; */
@@ -179,16 +182,23 @@ html,body{
 .headLinks a{
     color: white;
 }
+#menu{
+    background-color: black;
+}
 .sticky{
     position: fixed !important;
     /* background-color: rgb(0, 0, 0); */
     top: 0;
     /* padding: 5px 25px; */
 }
+.sticky a img{
+    width: 43px;
+    border: 2px solid rgb(69, 68, 68);
+}
+
 #head a,#head h3{
     text-decoration: none;
     cursor: pointer;
-    background-color: black;
     mix-blend-mode: difference;
     font-weight: 100;
     font-size: 1.0625rem;
@@ -221,6 +231,49 @@ html,body{
 #head h3:hover{
     text-decoration: underline;
 }
+
+.dropmenu{
+    overflow: hidden;
+    position: fixed;
+    right: 4%;
+    top: 6%;
+    /* background-color: white; */
+    width: 10rem;
+    height: fit-content;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.dropmenu a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: .5rem;
+    font-weight: 700;
+}
+.dropdiv{
+    cursor: pointer;
+    text-align: center;
+    margin: 2px;
+    padding: .5rem 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: .5s;
+    border: 1px solid gray;
+}
+.dropdiv:hover{
+    text-decoration: underline;
+    padding: .7rem 0;
+    font-size: .7rem;
+    margin: 3px 0;
+}
+.dropdiv h2{
+    cursor: pointer;
+    font-family: 'General Sans Medium';
+    font-weight: 700;
+}
+
 #headingLine{
     padding-top: 10rem;
     line-height: 1;
@@ -302,6 +355,16 @@ html,body{
     color: rgb(239, 2, 2);
     cursor: pointer;
 }
+.arrow{
+    text-decoration: none;
+    color: white;
+}
+.arrow div{
+    cursor: pointer;
+}
+.arrow div i{
+    cursor: pointer;
+}
 #foot{
     overflow-x: hidden !important;
     /* position: absolute; */
@@ -380,12 +443,15 @@ html,body{
 }
 
 .about_info h3{
+    margin-bottom: .5rem;
     opacity: .6;
     text-transform: uppercase;
 }
 .about_info p{
-    font-size: 1.5rem;
+    margin-right: 2rem;
+    font-size: 1.4rem;
     overflow: hidden;
+    font-family: "General Sans Medium";
 }
 .about_box{
     display: flex;
@@ -401,7 +467,12 @@ html,body{
 .about_info p{
     margin-bottom: 2rem;
 }
+.about_info h2{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
 .about_info h2 span{
+    font-size: 1.4rem;
     color: grey;
 }
 /*------------------------Page3-------------------*/
@@ -748,6 +819,12 @@ html,body{
     margin: 0 3px;
 }
 @media (max-width: 1120px){
+    /* .inner-cursor{
+        display: none;
+    }
+    .outer-cursor{
+        display: none;
+    } */
     .about_info{
         width: 100%;
     }
@@ -758,13 +835,32 @@ html,body{
         grid-template-rows: .5fr 1fr;
         gap: 2rem; */
     }
+    .about_info p{
+        font-size: 1rem;
+        margin: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .about_info h2{
+        font-size: 1rem;
+        font-weight: 200;
+        margin-left: 1rem;
+    }
+    .about_info h2 span{
+        font-weight: 700;
+    }
+    .about_info h3{
+        margin-left: 1rem;
+    }
+    .education_page h3{
+        font-size: 10vw;
+    }
 }
 @media (max-width: 520px){
     #main{
         width: 100%;
     }
     .heading{
-        padding: 10px 25px;
+        padding: 10px 15px;
         width: 100%;
         background-color: black;
     }
@@ -860,9 +956,19 @@ html,body{
     }
     .about_info p{
         font-size: 1rem;
+        margin: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .about_info h2 span{
+        font-weight: 700;
     }
     .about_info h2{
         font-size: 1rem;
+        font-weight: 200;
+        margin-left: 1rem;
+    }
+    .about_info h3{
+        margin-left: 1rem;
     }
     .myImage img{
         width: 10rem;
