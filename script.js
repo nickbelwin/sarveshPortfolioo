@@ -77,87 +77,99 @@ dropMenu.addEventListener("click", () => {
         flagdrop = false;
         document.getElementById("drop").innerHTML = `
     <div id="dropDown" class="dropmenu">
-            <a id="drop1" href="#page2">
+            <a id="drop1" href="#page1">
+                <div class="dropdiv">
+                    <h2>HOME</h2>
+                </div>
+            </a>
+            <a id="drop2" href="#page2">
                 <div class="dropdiv">
                     <h2>ABOUT ME</h2>
                 </div>
             </a>
-            <a id="drop2" href="#page3">
+            <a id="drop3" href="#page3">
                 <div class="dropdiv">
                     <h2>EDUCATION</h2>
                 </div>
             </a>
-            <a id="drop3" href="#expe">
+            <a id="drop4" href="#expe">
                 <div class="dropdiv">
                     <h2>EXPEREANCE</h2>
                 </div>
             </a>
-            <a id="drop4" href="#page4">
+            <a id="drop5" href="#page4">
                 <div class="dropdiv">
                     <h2>PROJECT</h2>
                 </div>
             </a>
-            <a id="drop5" href="#page5">
+            <a id="drop6" href="#page5">
                 <div class="dropdiv">
                     <h2>SKILLS</h2>
                 </div>
             </a>
-            <a id="drop6" href="#page6">
+            <a id="drop7" href="#page6">
                 <div class="dropdiv">
                     <h2>CONTACT ME</h2>
                 </div>
             </a>
 
         </div>`
-        let menuAnimation=gsap.timeline();
+        let menuAnimation = gsap.timeline();
         menuAnimation.from("#menu", {
             x: '0',
             opacity: 1,
             duration: 1,
             ease: Expo.easeInOut
         })
-        .from("#drop1", {
-            x: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.2,
-            ease: Expo.easeInOut
-        })
-        .from("#drop2", {
-            x: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.2,
-            ease: Expo.easeInOut
-        })
-        .from("#drop3", {
-            y: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.2,
-            ease: Expo.easeInOut
-        })
-        .from("#drop4", {
-            x: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.2,
-            ease: Expo.easeInOut
-        })
-        .from("#drop5", {
-            y: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.1,
-            ease: Expo.easeInOut
-        })
-        .from("#drop6", {
-            x: '20',
-            opacity: 0,
-            delay: -1,
-            duration: 1.1,
-            ease: Expo.easeInOut
-        })
+            .from("#drop1", {
+                x: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop2", {
+                x: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop3", {
+                y: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop4", {
+                x: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop5", {
+                y: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop6", {
+                x: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
+            .from("#drop7", {
+                x: '20',
+                opacity: 0,
+                delay: -1,
+                duration: 1.1,
+                ease: Expo.easeInOut
+            })
 
         dropMenu.style.backgroundColor = "white";
         dropMenu.style.color = "black";
