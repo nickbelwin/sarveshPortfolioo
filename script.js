@@ -94,7 +94,7 @@ dropMenu.addEventListener("click", () => {
             </a>
             <a id="drop4" href="#expe">
                 <div class="dropdiv">
-                    <h2>EXPEREANCE</h2>
+                    <h2>EXPERIENCE</h2>
                 </div>
             </a>
             <a id="drop5" href="#page4">
