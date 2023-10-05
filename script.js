@@ -370,7 +370,12 @@ document.getElementById("typingGame").addEventListener("click", (e) => {
 document.getElementById("tictactoe").addEventListener("click", (e) => {
     window.location.href = "https://nickbelwin.github.io/TicTacToeGame/";
 });
-
+document.getElementById("taskManager").addEventListener("click", (e) => {
+    window.location.href = "https://nickbelwin.github.io/Task-Manager-App---Javascript-Project---adumymr7rrtu/";
+});
+document.getElementById("movieDeck").addEventListener("click", (e) => {
+    window.location.href = "https://nickbelwin.github.io/Movie-Deck-Project-Buidling---JS-Project-Building-Session-HTML-CSS---In-Cla---y04lgd7b2xpx/";
+});
 document.getElementById("page1").addEventListener("click", () => {
     flagdrop = true;
     document.getElementById("drop").innerHTML = "";
