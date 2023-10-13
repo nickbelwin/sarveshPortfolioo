@@ -595,7 +595,8 @@ html,body{
     color: white; */
     color: #fff;
     padding-right: 10vw;
-    padding-top: 200px;
+    padding-top: 70px;
+    padding-bottom: 10rem;
     background-color: black;
     width: 100%;
     /* height: 100vh; */
@@ -637,7 +638,7 @@ html,body{
     opacity: .6; */
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 4vw;
+    font-size: 2.5vw;
     opacity: .7;
 }
 .projectelements h2{
@@ -665,7 +666,8 @@ html,body{
 
 #page5{
     width: 100%;
-    padding: 12rem 0;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
     /* height: 100vh; */
     color: white;
     background-color: rgb(0, 0, 0);
@@ -705,9 +707,9 @@ html,body{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
-.skill h1{
+.skill h3{
     font-family: "General Sans Medium";
-    font-weight: 800;
+    font-weight: 500;
     text-transform: uppercase;
 }
 .skill img{
@@ -739,13 +741,14 @@ html,body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0rem 2rem;
+    padding-top: 6rem;
     /* height: 90vh; */
     background-color: black;
     color: white;
     padding-bottom: 8rem;
 }
 .contact-Left{
-    font-size: 5vw;
+    font-size: 4vw;
     display: flex;
     align-items: center;
 }
@@ -792,12 +795,17 @@ html,body{
 .inputbox a{
     text-decoration: none;
     color: white;
+    border: 2px solid white;
+    width: fit-content;
+    padding: .6rem;
+    border-radius: 10px;
     
 }
 .inputbox a:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* border-bottom: 1px solid white; */
     width: fit-content;
+    background-color: #f879df;
     cursor: pointer;
 }
 
