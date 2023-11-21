@@ -13,7 +13,7 @@ document.addEventListener('mousemove', moveCursor);
 
 function moveCursor(e) {
     innercursor.classList.add("inner-cursor");
-    outercursor.classList.add("outer-cursor")
+    outercursor.classList.add("outer-cursor");
     let x = e.clientX;
     let y = e.clientY;
     // console.log(x,y);

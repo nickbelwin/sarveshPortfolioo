@@ -393,7 +393,7 @@ html,body{
 
 .bold{
     cursor: pointer;
-    width: fit-content;
+    /* width: fit-content; */
 }
 #page2{
     position: relative;
