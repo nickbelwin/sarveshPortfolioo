@@ -439,7 +439,15 @@ function sendEmail(){
         })
     }
     else{
-        alert("error: Please fill all Information !!!");
+        if(!document.getElementById("name").value && !document.getElementById("email").value && !userEmail && !document.getElementById("message").value){
+            alert("error: Please fill all Information !!!");
+        }
+        else if(!userEmail){
+            alert("error: Please enter correct email address. ( @gmail.com ) is missing!!!");
+        }
+        else{
+            alert("error: Please fill all Information !!!");
+        }
     }
     
 }
