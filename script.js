@@ -431,7 +431,10 @@ function sendEmail(){
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
     }
-    if(document.getElementById("name").value && document.getElementById("email").value && document.getElementById("message").value){
+    let userEmail= document.getElementById("email").value;
+    userEmail= userEmail.includes("@gmail.com");
+    console.log(userEmail);
+    if(document.getElementById("name").value && document.getElementById("email").value && userEmail && document.getElementById("message").value){
         emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){alert("Success! "+ res.status);
         })
     }
