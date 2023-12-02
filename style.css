@@ -241,7 +241,7 @@ html,body{
 }
 
 .dropmenu{
-    transform: translateX(500px);
+    transform: translateX(700px);
     transition: .9s;
     overflow: hidden;
     position: fixed;
@@ -812,8 +812,9 @@ html,body{
     border-bottom: 2px solid white;
     cursor: pointer;
 }
-.inputbox a{
+.inputbox button{
     text-decoration: none;
+    background-color: black;
     color: white;
     border: 2px solid white;
     width: fit-content;
@@ -821,11 +822,13 @@ html,body{
     border-radius: 10px;
     
 }
-.inputbox a:hover{
+.inputbox button:hover{
     /* text-decoration: underline; */
     /* border-bottom: 1px solid white; */
     width: fit-content;
-    background-color: #f879df;
+    background-color: #ffffff;
+    color: black;
+    font-weight: 500;
     cursor: pointer;
 }
 

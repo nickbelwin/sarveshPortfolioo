@@ -82,13 +82,13 @@ dropMenu.addEventListener("click", (e) => {
     else{
         flagdrop=true;
         dropMenu.innerHTML="Menu+";
-        document.querySelector(".dropmenu").style.transform="translateX(500px)";
+        document.querySelector(".dropmenu").style.transform="translateX(700px)";
     }
 })
 document.getElementById("main").addEventListener("click", ()=>{
     flagdrop=true;
     dropMenu.innerHTML="Menu+";
-    document.querySelector(".dropmenu").style.transform="translateX(500px)";
+    document.querySelector(".dropmenu").style.transform="translateX(700px)";
 })
 
 
@@ -394,3 +394,35 @@ document.getElementById("page6").addEventListener("click", () => {
     dropMenu.style.backgroundColor = "black";
     dropMenu.style.color = "white";
 });
+// function sendEmail(){
+//     let name=document.getElementById("name").value;
+//     let enteredEmail=document.getElementById("email").value;
+//     let subject=document.getElementById("subject").value;
+//     let message=document.getElementById("message").value;
+
+//     let body= "Name: "+name+ "<br/> Email: "+enteredEmail+ "<br/> Subject: "+subject+ "<br/> Message: "+message;
+
+//     console.log("body: ",body);
+
+//     Email.send({
+//         SecureToken : "896f9306-4218-4bb1-a1a5-c1c8b63a17d",
+//         // Host : "smtp.elasticemail.com",
+//         // Username : "belwalkarsarvesh@gmail.com",
+//         // Password : "29CF86B94A8411935A831FAF2D436C784B41",
+//         To : 'belwalkarsarvesh@gmail.com',
+//         From : enteredEmail,
+//         Subject : subject,
+//         Body : body
+//     }).then(
+//       message => alert(message)
+//     );
+// }
+function sendEmail(){
+    let params= {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    }
+    emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){alert("Success! "+ res.status);
+})
+}

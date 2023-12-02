@@ -287,12 +287,13 @@
                             class="ri-linkedin-box-fill"></i></a>
                     <a href="mailto:belwalkarsarvesh@gmail.com" style="color: red;"><i class="ri-mail-line"></i></a>
                 </div>
-                <div class="inputbox">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea cols="30" rows="3" placeholder="write message"></textarea>
-                    <a href="#page6">Send message</a>
-                </div>
+                <form class="inputbox" >
+                    <input type="text" id="name" placeholder="Your Name..." required>
+                    <input type="email" id="email" placeholder="Your Email..." required>
+                    <!-- <input type="text" id="subject" placeholder="Your Subject..." required> -->
+                    <textarea id="message" cols="30" rows="3" placeholder="write message"></textarea>
+                    <button type="button" onclick="sendEmail(); reset(); return false; "class="bold">Send message</button>
+                </form>
             </div>
         </div>
         <footer id="footer">
@@ -300,7 +301,13 @@
         </footer>
 
     </div>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('Y3exQq4ciAcN2YU6h')
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
