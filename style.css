@@ -235,47 +235,63 @@ html,body{
 #head h3:hover{
     text-decoration: underline;
 }
+#menu{
+    z-index: 11;
+    transition: 5s;
+}
 
 .dropmenu{
+    transform: translateX(500px);
+    transition: .9s;
     overflow: hidden;
     position: fixed;
-    right: 4%;
-    top: 6%;
-    /* background-color: white; */
-    width: 10rem;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    right: -1%;
+    top: 0%;
+    width: 30vw;
+    padding-top: 3rem;
+    height: 100vh;
     z-index: 10;
     cursor: pointer;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .dropmenu a{
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: .5rem;
     font-weight: 700;
+    
 }
 .dropdiv{
     cursor: pointer;
     text-align: center;
+    font-size: 1rem;
     margin: 2px;
-    padding: .5rem 0;
-    background-color: #ffffff;
-    border-radius: 10px;
+    width: 60vw;
+    /* padding: 1.5rem 0; */
+    /* border-radius: 10px; */
     transition: .5s;
-    border: 1px solid gray;
+    /* border-bottom: 2px solid rgb(255, 255, 255); */
+    
 }
 .dropdiv:hover{
-    text-decoration: underline;
-    padding: .7rem 0;
+    text-decoration: none;
+    /* padding: .7rem 0;
     font-size: .7rem;
-    margin: 3px 0;
+    margin: 3px 0; */
 }
 .dropdiv h2{
     cursor: pointer;
     font-family: 'General Sans Medium';
-    font-weight: 700;
+    font-weight: 500;
+    padding: 1.7rem 0;
+    /* text-align: left; */
+    /* padding-bottom: 2rem; */
 }
 
 #headingLine{
@@ -866,6 +882,19 @@ html,body{
     }
     .education_page h3{
         font-size: 10vw;
+    }
+    .dropmenu{
+        width: 70vw;
+        justify-content: start;
+        padding-top: 4rem;
+        padding-left: 1rem;
+    }
+    .dropdiv h2{
+        width: 100vw;
+        padding-left: 0;
+        text-align: left;
+        font-size: 1rem;
+        padding: .5rem 0;
     }
 }
 @media (max-width: 520px){

@@ -71,123 +71,105 @@ window.onscroll = function () {
 
 const dropMenu = document.getElementById("menu");
 let flagdrop = true;
-
-dropMenu.addEventListener("click", () => {
-    if (flagdrop === true) {
-        flagdrop = false;
-        document.getElementById("drop").innerHTML = `
-    <div id="dropDown" class="dropmenu">
-            <a id="drop1" href="#page1">
-                <div class="dropdiv">
-                    <h2>HOME</h2>
-                </div>
-            </a>
-            <a id="drop2" href="#page2">
-                <div class="dropdiv">
-                    <h2>ABOUT ME</h2>
-                </div>
-            </a>
-            <a id="drop3" href="#page3">
-                <div class="dropdiv">
-                    <h2>EDUCATION</h2>
-                </div>
-            </a>
-            <a id="drop4" href="#expe">
-                <div class="dropdiv">
-                    <h2>EXPERIENCE</h2>
-                </div>
-            </a>
-            <a id="drop5" href="#page4">
-                <div class="dropdiv">
-                    <h2>PROJECT</h2>
-                </div>
-            </a>
-            <a id="drop6" href="#page5">
-                <div class="dropdiv">
-                    <h2>SKILLS</h2>
-                </div>
-            </a>
-            <a id="drop7" href="#page6">
-                <div class="dropdiv">
-                    <h2>CONTACT ME</h2>
-                </div>
-            </a>
-
-        </div>`
-        let menuAnimation = gsap.timeline();
-        menuAnimation.from("#menu", {
-            x: '0',
-            opacity: 1,
-            duration: 1,
-            ease: Expo.easeInOut
-        })
-            .from("#drop1", {
-                x: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop2", {
-                x: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop3", {
-                y: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop4", {
-                x: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop5", {
-                y: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop6", {
-                x: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-            .from("#drop7", {
-                x: '20',
-                opacity: 0,
-                delay: -1,
-                duration: 1.1,
-                ease: Expo.easeInOut
-            })
-
-        dropMenu.style.backgroundColor = "white";
-        dropMenu.style.color = "black";
-        document.getElementById("dropDown").addEventListener("click", () => {
-            flagdrop = true;
-            document.getElementById("drop").innerHTML = "";
-            dropMenu.style.backgroundColor = "black";
-            dropMenu.style.color = "white";
-
-        })
+dropMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if(flagdrop===true){
+        flagdrop=false;
+        dropMenu.innerHTML="Back";
+        document.querySelector(".dropmenu").style.transform="translateX(0px)";
+        
     }
-    else {
-        flagdrop = true;
-        document.getElementById("drop").innerHTML = "";
-        dropMenu.style.backgroundColor = "black";
-        dropMenu.style.color = "white";
+    else{
+        flagdrop=true;
+        dropMenu.innerHTML="Menu+";
+        document.querySelector(".dropmenu").style.transform="translateX(500px)";
     }
 })
+document.getElementById("main").addEventListener("click", ()=>{
+    flagdrop=true;
+    dropMenu.innerHTML="Menu+";
+    document.querySelector(".dropmenu").style.transform="translateX(500px)";
+})
+
+
+// dropMenu.addEventListener("click", () => {
+//     if (flagdrop === true) {
+//         flagdrop = false;
+//         document.getElementById("dropDown").style.display="block";
+//         let menuAnimation = gsap.timeline();
+//         menuAnimation.from("#menu", {
+//             x: '0',
+//             opacity: 1,
+//             duration: 1,
+//             ease: Expo.easeInOut
+//         })
+//             .from("#drop1", {
+//                 x: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop2", {
+//                 x: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop3", {
+//                 y: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop4", {
+//                 x: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop5", {
+//                 y: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop6", {
+//                 x: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+//             .from("#drop7", {
+//                 x: '20',
+//                 opacity: 0,
+//                 delay: -1,
+//                 duration: 1.1,
+//                 ease: Expo.easeInOut
+//             })
+
+//         dropMenu.style.backgroundColor = "white";
+//         dropMenu.style.color = "black";
+//         document.getElementById("dropDown").addEventListener("click", () => {
+//             flagdrop = true;
+//             document.getElementById("drop").innerHTML = "";
+//             dropMenu.style.backgroundColor = "black";
+//             dropMenu.style.color = "white";
+
+//         })
+//     }
+//     else {
+//         flagdrop = true;
+//         document.getElementById("drop").innerHTML = "";
+//         dropMenu.style.backgroundColor = "black";
+//         dropMenu.style.color = "white";
+//     }
+// })
 
 // for Sticky header------------------
 // let header=document.getElementById("head");
