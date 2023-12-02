@@ -31,6 +31,10 @@ links.forEach((val) => {
         outercursor.classList.add("groww");
 
     });
+    val.addEventListener("click", ()=>{
+        innercursor.classList.remove("grow");
+        outercursor.classList.remove("groww");
+    });
     val.addEventListener("mouseout", () => {
         innercursor.classList.remove("grow");
         outercursor.classList.remove("groww");
@@ -41,6 +45,10 @@ links2.forEach((val) => {
         innercursor.classList.add("grow");
         outercursor.classList.add("groww");
     });
+    val.addEventListener("click", ()=>{
+        innercursor.classList.remove("grow");
+        outercursor.classList.remove("groww");
+    })
     val.addEventListener("mouseout", () => {
         innercursor.classList.remove("grow");
         outercursor.classList.remove("groww");
@@ -423,6 +431,12 @@ function sendEmail(){
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
     }
-    emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){alert("Success! "+ res.status);
-})
+    if(document.getElementById("name").value && document.getElementById("email").value && document.getElementById("message").value){
+        emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){alert("Success! "+ res.status);
+        })
+    }
+    else{
+        alert("error: Please fill all Information !!!");
+    }
+    
 }

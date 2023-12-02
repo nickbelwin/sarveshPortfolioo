@@ -818,7 +818,8 @@ html,body{
     color: white;
     border: 2px solid white;
     width: fit-content;
-    padding: .6rem;
+    padding: .9rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     
 }
@@ -898,6 +899,9 @@ html,body{
         text-align: left;
         font-size: 1rem;
         padding: .5rem 0;
+    }
+    .inputbox button{
+        font-size: 1rem;
     }
 }
 @media (max-width: 520px){
