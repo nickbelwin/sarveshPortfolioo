@@ -5,15 +5,7 @@
 //     })
 // }
 // follower();
-document.getElementById("mainLoader").style.transform="scale(1)";
-setTimeout(()=>{
-    document.getElementById("mainLoader").style.transform="scale(0)";
-    document.getElementById("main").style.display="block";
-    pageAnimation();
-},2300)
-setTimeout(()=>{
-    document.getElementById("mainLoader").style.display="none";
-},3000)
+
 
 // for mouse custom cursor-------------------- 
 let innercursor = document.querySelector('#cursor1');
@@ -63,17 +55,23 @@ links2.forEach((val) => {
         outercursor.classList.remove("groww");
     });
 });
-
-
+let header;
+let myName;
+let sticky;
+let progress;
+let totalHeight;
 // srollbar custom=================================
-let header = document.getElementById("head");
-let myName = document.querySelector(".myName");
-let sticky = header.offsetTop;
-let progress = document.getElementById("progressBar");
-let totalHeight = document.body.scrollHeight - window.innerHeight;
+setTimeout(()=>{
+    header = document.getElementById("head");
+    myName = document.querySelector(".myName");
+    sticky = header.offsetTop;
+    progress = document.getElementById("progressBar");
+    totalHeight = document.body.scrollHeight - window.innerHeight;
+},3000)
 window.onscroll = function () {
     let progressHeight = (window.pageYOffset / totalHeight) * 100;
-    progress.style.height = progressHeight + "%";
+    console.log("progress: ", progressHeight);
+    progress.style.height = progressHeight+11+ "%";
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
         myName.innerHTML = ``;
@@ -83,7 +81,6 @@ window.onscroll = function () {
         myName.innerHTML = `Sarvesh Belwalkar`;
     }
 }
-
 // ------------------------ drop menu-----------------------
 
 const dropMenu = document.getElementById("menu");
@@ -326,7 +323,7 @@ function pageAnimation() {
             ease: Expo.easeInOut
         })
 }
-
+// pageAnimation();
 document.querySelectorAll(".projectelements").forEach(function (elem) {
     var rotate = 0;
     var diffrot = 0;
@@ -544,3 +541,14 @@ function sendEmail(){
     }
     
 }
+
+document.getElementById("mainLoader").style.transform="scale(1)";
+setTimeout(()=>{
+    document.getElementById("mainLoader").style.transform="scale(0)";
+    document.getElementById("main").style.display="block";
+    pageAnimation();
+},2300)
+setTimeout(()=>{
+    document.getElementById("mainLoader").style.display="none";
+    document.getElementById("socialbar").style.display="block";
+},3000)
