@@ -425,6 +425,80 @@ document.getElementById("page6").addEventListener("click", () => {
 //       message => alert(message)
 //     );
 // }
+let userName= document.getElementById("name").value;
+
+
+function showContactError(){
+  
+    if(!document.getElementById("name").value){
+        
+        document.getElementById("nameError").style.transform="translateY(0px)";
+        document.getElementById("nameError").style.zIndex="1";
+    }
+    if(!document.getElementById("email").value){
+        
+        document.getElementById("emailError").style.transform="translateY(0px)";
+        document.getElementById("emailError").style.zIndex="1";
+    }
+    if(!document.getElementById("message").value){
+        console.log(document.getElementById("message").value);
+        document.getElementById("msgError").style.transform="translateY(0px)";
+        document.getElementById("msgError").style.zIndex="1";
+    }
+}
+
+function checkInput(e){
+    if(document.getElementById("name").value){
+        document.getElementById("nameError").style.transform="translateY(-15px)";
+        document.getElementById("nameError").style.zIndex="-1";
+    }
+    if(document.getElementById("email").value){
+        document.getElementById("emailError").style.transform="translateY(-15px)";
+        document.getElementById("emailError").style.zIndex="-1";
+        let userEmail= document.getElementById("email").value;
+        if(userEmail.includes("@")){
+            document.getElementById("incorrectEmail").style.transform="translateY(-15px)";
+                document.getElementById("incorrectEmail").style.zIndex="-1";
+        }
+    }
+    if(document.getElementById("message").value){
+        
+        document.getElementById("msgError").style.transform="translateY(-15px)";
+        document.getElementById("msgError").style.zIndex="-1";
+    }
+}
+function isMailSent(){
+    document.getElementById("notification").style.zIndex="1";
+    document.getElementById("success").style.transform="scale(1)";
+    document.getElementById("success").style.zIndex="1";
+    
+}
+function successfullySent(){
+    document.getElementById("success").style.transform="scale(0)";
+    document.getElementById("success").style.zIndex="-1";
+    setTimeout(()=>{
+        document.getElementById("name").value="";
+        document.getElementById("email").value="";
+        document.getElementById("message").value="";
+        document.getElementById("notification").style.zIndex="-1";
+    },500);
+}
+
+function isMailNotSent(){
+    document.getElementById("notification").style.zIndex="1";
+    document.getElementById("fail").style.display="flex";
+    document.getElementById("fail").style.transform="translateY(0px)";
+    document.getElementById("fail").style.zIndex="1";
+}
+function failToSent(){
+    document.getElementById("fail").style.transform="translateY(-150px)";
+    document.getElementById("fail").style.zIndex="-1";
+    setTimeout(()=>{
+        document.getElementById("fail").style.display="none";
+        document.getElementById("notification").style.zIndex="-1";
+    },500);
+}
+
 function sendEmail(){
     let params= {
         name: document.getElementById("name").value,
@@ -432,21 +506,36 @@ function sendEmail(){
         message: document.getElementById("message").value,
     }
     let userEmail= document.getElementById("email").value;
-    userEmail= userEmail.includes("@gmail.com");
+    userEmail= userEmail.includes("@");
     console.log(userEmail);
     if(document.getElementById("name").value && document.getElementById("email").value && userEmail && document.getElementById("message").value){
-        emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){alert("Success! "+ res.status);
-        })
+        document.getElementById("sendButton").style.color="";
+        document.getElementById("loader").style.display="block";
+        emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){isMailSent(); 
+            document.getElementById("sendButton").style.color="white";
+            document.getElementById("loader").style.display="none";}).catch(function(){isMailNotSent()});
     }
     else{
         if(!document.getElementById("name").value && !document.getElementById("email").value && !userEmail && !document.getElementById("message").value){
-            alert("error: Please fill all Information !!!");
+            // alert("error: Please fill all Information !!!");
+            showContactError();
         }
         else if(!userEmail){
-            alert("error: Please enter correct email address. ( @gmail.com ) is missing!!!");
+            if(!document.getElementById("email").value){
+                showContactError();
+            }
+            else{
+                document.getElementById("incorrectEmail").style.transform="translateY(0px)";
+                document.getElementById("incorrectEmail").style.zIndex="1";
+            }
+
+            
+            
+            // alert("error: Please enter correct email address. ( @gmail.com ) is missing!!!");
         }
         else{
-            alert("error: Please fill all Information !!!");
+            showContactError();
+            // alert("error: Please fill all Information !!!");
         }
     }
     

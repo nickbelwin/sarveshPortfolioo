@@ -274,11 +274,20 @@
             </div>
         </div>
         <div id="page6">
+            <div id="notification">
+                <div id="success">
+                    <img class="mailSentOrFail" src="./media/msgSent.png" alt="">
+                    <button onclick="successfullySent()">Done</button>
+                </div>
+                <div id="fail">
+                    <img class="mailSentOrFail" src="./media/msgFail.png" alt="">
+                    <button onclick="failToSent()" >Try again</button>
+                </div>
+            </div>
             <div class="contact-Left">
                 <h1>Get In Touch</h1>
             </div>
             <div class="contact-right">
-                <h1></h1>
                 <div class="contactMe">
                     <a class="bold" href="https://github.com/nickbelwin" style="color: rgb(111, 0, 255);"><i
                             class="ri-github-fill"></i></a>
@@ -286,12 +295,26 @@
                             class="ri-linkedin-box-fill"></i></a>
                     <a href="mailto:belwalkarsarvesh@gmail.com" style="color: red;"><i class="ri-mail-line"></i></a>
                 </div>
+                
                 <form class="inputbox" >
-                    <input type="text" id="name" placeholder="*Your Name" required>
-                    <input type="email" id="email" placeholder="*Your Email" required>
-                    <!-- <input type="text" id="subject" placeholder="Your Subject..." required> -->
-                    <textarea id="message" cols="30" rows="3" placeholder="*write message"></textarea>
-                    <button type="button" onclick="sendEmail(); reset(); return false; "class="bold">Send message</button>
+                    <div>
+                        <input type="text" id="name" placeholder="*Your Name" oninput="checkInput()" required>
+                        <p id="nameError">Please enter your name !!!</p>
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder="*Your Email" oninput="checkInput()" required>
+                        <p id="emailError">Please enter your email !!!</p>
+                        <p id="incorrectEmail">incorrect email address!!!</p>
+                    </div>
+                    <div>
+                        <textarea id="message" cols="30" rows="3" placeholder="*write message" oninput="checkInput()"></textarea>
+                        <p id="msgError">Please enter your message !!!</p>
+                    </div>
+                    <div id="sendBtn">
+                        <button id="sendButton" type="button" onclick="sendEmail(); return false; "class="bold">Send message</button>
+                        <img id="loader" class="bold" src="./media//loader.gif" alt="">
+                    </div>
+                    
                 </form>
             </div>
         </div>
