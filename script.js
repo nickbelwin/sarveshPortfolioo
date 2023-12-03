@@ -509,10 +509,8 @@ function sendEmail(){
     userEmail= userEmail.includes("@");
     console.log(userEmail);
     if(document.getElementById("name").value && document.getElementById("email").value && userEmail && document.getElementById("message").value){
-        document.getElementById("sendButton").style.color="";
-        document.getElementById("loader").style.display="block";
+        document.getElementById("loader").style.display="flex";
         emailjs.send("service_9ltod7l", "template_9on8pcv", params ).then(function(res){isMailSent(); 
-            document.getElementById("sendButton").style.color="white";
             document.getElementById("loader").style.display="none";}).catch(function(){isMailNotSent()});
     }
     else{

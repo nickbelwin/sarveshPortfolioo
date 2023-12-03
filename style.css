@@ -241,7 +241,7 @@ html,body{
 }
 
 .dropmenu{
-    transform: translateX(700px);
+    transform: translateX(1000px);
     transition: .9s;
     overflow: hidden;
     position: fixed;
@@ -914,10 +914,15 @@ html,body{
 }
 #loader{
     display: none;
+    justify-content: center;
     position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 87%;
+    left: 5%;
+    top: 42%;
+}
+#loader img{
     width: 50%;
-    left: 23%;
-    top: 40%;
 }
 .inputbox button:hover{
     /* text-decoration: underline; */
@@ -999,14 +1004,19 @@ html,body{
     .inputbox button{
         font-size: 1rem;
     }
+    #page6{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #success{
-        left: 41%;
-        top: 15%;
+        left: 35%;
+        top: 42%;
         
     }
     #fail{
-        left: 41%;
-        top: 15%;
+        left: 35%;
+        top: 42%;
     }
 }
 @media ( min-width:521px) and (max-width: 678px){
@@ -1094,12 +1104,12 @@ html,body{
         /* box-shadow: 0 0 20px 0 white; */
     }
     #success{
-        left: 25%;
-        top: 22%;
+        left: 2%;
+        top: 25%;
     }
     #fail{
-        left: 25%;
-        top: 22%;
+        left: 2%;
+        top: 25%;
     }
     #foot{
         width: 100%;
