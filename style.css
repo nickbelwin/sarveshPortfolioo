@@ -133,10 +133,18 @@ html,body{
     background: linear-gradient(to top, #008aff,#00ffe7);
     filter: blur(0px);
 }
+#mainLoader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 #main{
+    display: none;
     overflow: hidden;
     position: relative;
-    background-color: rgb(17, 193, 81);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     /* padding: 0 2rem; */
 }
@@ -913,7 +921,7 @@ html,body{
     
 }
 #loader{
-    display: none;
+    display: flex;
     justify-content: center;
     position: absolute;
     background-color: rgb(0, 0, 0);

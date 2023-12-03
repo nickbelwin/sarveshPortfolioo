@@ -6,6 +6,12 @@
 // }
 // follower();
 
+setTimeout(()=>{
+    document.getElementById("mainLoader").style.display="none";
+    document.getElementById("main").style.display="block";
+    pageAnimation();
+},8000)
+
 // for mouse custom cursor-------------------- 
 let innercursor = document.querySelector('#cursor1');
 let outercursor = document.querySelector('#cursor2');
@@ -317,9 +323,6 @@ function pageAnimation() {
             ease: Expo.easeInOut
         })
 }
-pageAnimation();
-
-
 
 document.querySelectorAll(".projectelements").forEach(function (elem) {
     var rotate = 0;
