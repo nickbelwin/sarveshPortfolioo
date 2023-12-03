@@ -970,6 +970,7 @@ html,body{
 @media (max-width: 1120px){
     #mainLoader img{
         width: 60%;
+        margin-bottom: 7rem;
     }
     /* .inner-cursor{
         display: none;
