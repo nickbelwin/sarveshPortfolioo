@@ -5,12 +5,15 @@
 //     })
 // }
 // follower();
-
+document.getElementById("mainLoader").style.transform="scale(1)";
 setTimeout(()=>{
-    document.getElementById("mainLoader").style.display="none";
+    document.getElementById("mainLoader").style.transform="scale(0)";
     document.getElementById("main").style.display="block";
     pageAnimation();
-},8000)
+},2300)
+setTimeout(()=>{
+    document.getElementById("mainLoader").style.display="none";
+},3000)
 
 // for mouse custom cursor-------------------- 
 let innercursor = document.querySelector('#cursor1');

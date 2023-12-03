@@ -134,11 +134,15 @@ html,body{
     filter: blur(0px);
 }
 #mainLoader{
+    transform: scale(0);
+    transition: 1s;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+#mainLoader img{
+    width: 30%;
 }
 #main{
     display: none;
