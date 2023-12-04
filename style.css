@@ -1108,6 +1108,7 @@ html,body{
         font-size: 10vw;
     }
     .dropmenu{
+        transform: translateX(100rem);
         width: 70vw;
         justify-content: start;
         padding-top: 4rem;
