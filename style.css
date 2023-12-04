@@ -145,7 +145,6 @@ html,body{
     width: 30%;
 }
 #main{
-    display: none;
     overflow: hidden;
     position: relative;
     background-color: rgb(0, 0, 0);
@@ -200,6 +199,7 @@ html,body{
 }
 #menu{
     background-color: black;
+    transition: 0s;
 }
 .sticky{
     position: fixed !important;
@@ -210,6 +210,9 @@ html,body{
 .sticky a img{
     width: 43px;
     border: 2px solid rgb(69, 68, 68);
+}
+#head{
+    position: relative;
 }
 
 #head a,#head h3{
@@ -291,7 +294,7 @@ html,body{
     /* border-bottom: 2px solid rgb(255, 255, 255); */
     
 }
-.dropdiv:hover{
+.dropdiv h2:hover{
     text-decoration: none;
     /* padding: .7rem 0;
     font-size: .7rem;
@@ -307,9 +310,9 @@ html,body{
 }
 
 #headingLine{
-    padding-top: 10rem;
+    padding-top: 7rem;
     line-height: 1;
-    padding-bottom: 11rem;
+    padding-bottom: 10rem;
     /* margin-bottom: 5rem; */
 }
 .line1{
@@ -349,7 +352,7 @@ html,body{
     font-weight: 500;
 }
 #socialbar{
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 40%;
     right: .8%;
@@ -440,6 +443,8 @@ html,body{
     overflow: hidden;
     padding: 1.5rem;
     background-color: rgb(0, 0, 0);
+}
+.about_tag{
 }
 /* .about_page{
     display: flex;
@@ -642,6 +647,34 @@ html,body{
     margin-bottom: 4rem;
     text-transform: uppercase;
 }
+.moreAboutProject{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    font-family: "General Sans Medium";
+    cursor: pointer;
+    transition: .5s;
+    transform: rotate(0deg);
+}
+.moreAboutProject:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#showMoreIcon{
+    height: fit-content;
+    margin-bottom: 3px;
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-family: "General Sans Medium";
+    cursor: pointer;
+    /* margin: 0 !important; */
+}
 .projectelements{
     /* cursor: pointer;
     position: relative;
@@ -658,9 +691,10 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 92%;
     padding: 3.5vw 3vw;
     padding-right: 0;
+    background-color: black;
     border-top: 1px solid #888;
 }
 
@@ -687,7 +721,7 @@ html,body{
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
-    width: 50%;
+    width: 40%;
     z-index: 999;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -695,6 +729,65 @@ html,body{
 .elemlast{
     border-bottom: 1px solid #888;
 }
+#logPage{
+    position: absolute;
+    background-color: black;
+    width: 80%;
+    transform: translateX(-100rem);
+    transition: .8s;
+    padding: 1rem 2rem;
+    font-size: 1vw;
+    /* min-height: 9.8rem; */
+    z-index: 2;
+}
+#tictactoeInfo{
+    position: absolute;
+    background-color: black;
+    width: 80%;
+    transform: translateX(-100rem);
+    transition: .8s;
+    font-size: 1vw;
+    padding: 1rem 2rem;
+    /* min-height: 9.8rem; */
+    z-index: 2;
+    /* border-top: 1px solid #888;
+    border-bottom: 1px solid #888; */
+}
+#typingGameInfo{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    transform: translateX(-100rem);
+    transition: .8s;
+    font-size: 1vw;
+    padding: 1rem 2rem;
+    /* min-height: 9.8rem; */
+    /* height:inherit; */
+    z-index: 2;
+}
+#taskManagerInfo{
+    position: absolute;
+    background-color:black;
+    width: 80%;
+    transform: translateX(-100rem);
+    transition: .8s;
+    padding: 1rem 2rem;
+    font-size: 1vw;
+    /* min-height: 9.8rem; */
+    z-index: 2;
+}
+#movieDeckInfo{
+    position: absolute;
+    background-color: black;
+    width: 80%;
+    transform: translateX(-100rem);
+    transition: .8s;
+    padding: 1rem 2rem;
+    font-size: 1vw;
+    /* min-height: 9.8rem; */
+    z-index: 2;
+}
+
 /* --------------------------Page5------------------------ */
 
 #page5{
@@ -811,21 +904,28 @@ html,body{
 }
 #notification{
     position: absolute;
-    width: 100vw;
-    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0vw;
+    height: 0vh;
     z-index: -1;
+    left: 0;
+    top: 0;
+    cursor: not-allowed;
 }
 #success{
     display: flex;
     justify-content: center;
-    z-index: 2;
     width: fit-content;
-    position: absolute;
-    left: 37%;
-    top: 11%;
+    margin-bottom: 5rem;
     z-index: -1;
     transform: scale(0);
     transition: 1s;
+    cursor: not-allowed;
+}
+#success img{
+    cursor: pointer;
 }
 #success button{
     position: absolute;
@@ -1039,6 +1139,14 @@ html,body{
     }
 }
 @media ( min-width:521px) and (max-width: 678px){
+    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+        display: none;
+    }
+    .projectelements{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
     #success{
         left: 33%;
         top: 28%;
@@ -1047,11 +1155,18 @@ html,body{
         left: 33%;
         top: 28%;
     }
+    #socialbar{
+        display: none;
+    }
 }
 
 @media (max-width: 520px){
     #main{
         width: 100%;
+    }
+    .dropdiv:hover{
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
     .heading{
         padding: 10px 15px;
@@ -1096,7 +1211,7 @@ html,body{
         display: flex;
         justify-content: center;
         margin-top: 30vw;
-        margin-bottom: 71vw;
+        margin-bottom: 60vw;
         text-align: center;
     }
     #socialMedia a{
@@ -1264,6 +1379,7 @@ html,body{
     .projectelements{
         padding-top: 2rem;
         padding-bottom: 2rem;
+        width: 100%;
     }
     .projectelements h1{
         font-size: 2rem;
@@ -1271,7 +1387,9 @@ html,body{
     .projectelements img{
         display: none;
     }
-
+    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+        display: none;
+    }
     #page5{
         padding: 2rem 0;
     }
@@ -1302,7 +1420,7 @@ html,body{
         margin-bottom: 3rem;
     }
     .inputbox input, .inputbox textarea{
-        width: 88vw;
+        width: 75vw;
         font-size: 1rem;
     }
     .inputbox a{

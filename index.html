@@ -28,11 +28,21 @@
             <a href="mailto:belwalkarsarvesh@gmail.com" id="mail"><i class="ri-mail-line"></i></a>
         </div>
     </div>
-    <div id="mainLoader">
+    <!-- <div id="mainLoader">
         <img src="./media/mainLoader2.gif" alt="">
-    </div>
+    </div> -->
     <div id="main">
         <header id="head" class="heading">
+            <div id="notification">
+                <div id="success">
+                    <img class="mailSentOrFail" src="./media/msgSent.png" alt="">
+                    <button class="bold" onclick="successfullySent()">Done</button>
+                </div>
+                <div id="fail">
+                    <img class="mailSentOrFail" src="./media/msgFail.png" alt="">
+                    <button onclick="failToSent()" >Try again</button>
+                </div>
+            </div>
             <a href="#page1" class="bold"><img src="./media/sarveshLogoo.png" alt=""><span class="myName bold">Sarvesh Belwalkar</span></a>
             <h3 id="menu" class="bold">Menu+</h3>
             <div id="dropDown" class="dropmenu">
@@ -214,30 +224,87 @@
         </div>
         <div id="page4">
             <h1>projects</h1>
-            <div id="tictactoe" class="projectelements">
-                <img src="./media/tictactoePoster.png" alt="">
-                <h1>Tic Tac Toe</h1>
-                <h2>2023</h2>
+            <div style="display: flex; align-items: center;">
+                <div id="loginpage" class="projectelements">
+                    <img src="./media/logInPage.png" alt="">
+                    <h1>LogIn Page</h1>
+                    <h2>2023</h2>
+                </div>
+                <div onclick="rotate5()" id="rotatePluse5" class="moreAboutProject bold" >
+                    <span id="showMoreIcon">+</span>
+                </div>
+                <div id="logPage">
+                    <h2>LogIn Page:</h2>
+                    <p id="logpageContent">This is <span style="color: green;">Spotify login</span> and <span style="color: green;">signup</span> page clones. Devloping this forms one of the most important elements that a web page contains and hence devloping these online forms is one of the most significant features when it comes to devloping the website.<br/>Teckstack Used: <span style="color: green;">HTML</span> and <span style="color: green;">CSS</span>.</p>
+                </div>
             </div>
-            <div id="typingGame" class="projectelements">
-                <img src="./media/typingGameImg.png" alt="">
-                <h1>Typing Game</h1>
-                <h2>2023</h2>
+            <div style="display: flex; align-items: center;">
+                <div id="tictactoe" class="projectelements">
+                    <img src="./media/tictactoePoster.png" alt="">
+                    <h1>Tic Tac Toe</h1>
+                    <h2>2023</h2>
+                </div>
+                <div onclick="rotate1()" 
+                id="rotatePluse1" class="moreAboutProject bold" >
+                    <span id="showMoreIcon">+</span>
+                </div>
+                <div id="tictactoeInfo">
+                    <h2>Tic Tac Toe:</h2>
+                    <p >The <span style="color: green;">tic-tac-toe</span> game is for two players. One player plays X and the other plays O. The players take turns placing their marks on a grid of three-by-three cells. If a given player gets three marks in a row horizontally, vertically, or diagonally, then that player wins the game.<br/>Teckstack Used: <span style="color: green;">HTML</span>, <span style="color: green;">CSS</span> and <span style="color: green;">JavaScript</span>.</p>
+                </div>
             </div>
-            <div id="taskManager" class="projectelements">
-                <img src="./media/taskManagerAppPoster.png" alt="">
-                <h1>Task Manager App</h1>
-                <h2>2023</h2>
+            <div style="display: flex; align-items: center;">
+                <div id="typingGame" class="projectelements">
+                    <img src="./media/typingGameImg.png" alt="">
+                    <h1>Typing Game</h1>
+                    <h2>2023</h2>
+                </div>
+                <div onclick="rotate2()" 
+                id="rotatePluse2" class="moreAboutProject bold" >
+                    <span id="showMoreIcon">+</span>
+                </div>
+                <div id="typingGameInfo">
+                    <h2>Typing Game:</h2>
+                    <p >It is a simple <span style="color: green;">Typing Game</span> mini project. This project helps you to improve your Typing speed. In this game, random paragraph will pop up on your screen and you have to type the given paragraph within a less time.<br>
+                        Teckstack Used: <span style="color: green;">HTML</span>, <span style="color: green;">CSS</span> and <span style="color: green;">JavaScript</span></p>
+                </div>
             </div>
-            <div id="movieDeck" class="projectelements">
-                <img src="./media/movieDeckPoster.png" alt="">
-                <h1>Movie Deck App</h1>
-                <h2>2023</h2>
+            <div style="display: flex; align-items: center;">
+                <div id="taskManager" class="projectelements">
+                    <img src="./media/taskManagerAppPoster.png" alt="">
+                    <h1>Task Manager App</h1>
+                    <h2>2023</h2>
+                </div>
+                <div onclick="rotate3()" 
+                id="rotatePluse3" class="moreAboutProject bold" >
+                    <span id="showMoreIcon">+</span>
+                </div>
+                <div id="taskManagerInfo">
+                    <h2>Task Manager App:</h2>
+                    <p >In this <span style="color: green;">Task Manager App</span> we can create new tasks, delete tasks & add descriptions. Set task status (e.g. to-do, in progress, in review, completed).<br>
+                        Teckstack Used: <span style="color: green;">HTML</span>, <span style="color: green;">CSS</span> and <span style="color: green;">JavaScript</span>.</p>
+                </div>
             </div>
-            <div id="loginpage" class="projectelements">
-                <img src="./media/logInPage.png" alt="">
-                <h1>LogIn Page</h1>
-                <h2>2023</h2>
+            <div style="display: flex; align-items: center;">
+                <div id="movieDeck" class="projectelements elemlast">
+                    <img src="./media/movieDeckPoster.png" alt="">
+                    <h1>Movie Deck App</h1>
+                    <h2>2023</h2>
+                </div>
+                <div onclick="rotate4()" 
+                id="rotatePluse4" class="moreAboutProject bold" >
+                    <span id="showMoreIcon">+</span>
+                </div>
+                <div id="movieDeckInfo">
+                    <h2>Movie Deck App:</h2>
+                    <p >In this <span style="color: green;">Movie Deck App</span> user can search movie by name so it will help user get movie easily. Easy to sort movies by rating and also 
+                    sort movies by date. User can add movies to favorite section.
+                    <br>
+                    Teckstack Used: <span style="color: green;">HTML</span>, <span style="color: green;">CSS</span> and <span style="color: green;">JavaScript</span>.
+                    </p>
+                </div>
+            </div>
+            
             </div>
             <!-- <div id="spotifyclone" class="projectelements elemlast">
                 <img src="./media/spotifyclone2.png" alt="">
@@ -245,7 +312,7 @@
                 <h2>2023</h2>
             </div> -->
         </div>
-        <div id="page5">
+        <div id="page5" >
             <div class="skill_page">
                 <h3 class="bold">My skills</h3>
             </div>
@@ -276,17 +343,8 @@
                 </div>
             </div>
         </div>
-        <div id="page6">
-            <div id="notification">
-                <div id="success">
-                    <img class="mailSentOrFail" src="./media/msgSent.png" alt="">
-                    <button class="bold" onclick="successfullySent()">Done</button>
-                </div>
-                <div id="fail">
-                    <img class="mailSentOrFail" src="./media/msgFail.png" alt="">
-                    <button onclick="failToSent()" >Try again</button>
-                </div>
-            </div>
+        <div id="page6" >
+            
             <div class="contact-Left">
                 <h1>Get In Touch</h1>
             </div>
