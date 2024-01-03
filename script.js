@@ -372,6 +372,9 @@ document.getElementById("taskManager").addEventListener("click", (e) => {
 document.getElementById("movieDeck").addEventListener("click", (e) => {
     window.location.href = "https://nickbelwin.github.io/Movie-Deck-Project-Buidling---JS-Project-Building-Session-HTML-CSS---In-Cla---y04lgd7b2xpx/";
 });
+document.getElementById("beyoungApp").addEventListener("click", (e) => {
+    window.location.href = "https://beyoung-store-clone-react-project-1-jnteolvro757.vercel.app/";
+});
 document.getElementById("page1").addEventListener("click", () => {
     flagdrop = true;
     document.getElementById("drop").innerHTML = "";
@@ -432,19 +435,7 @@ document.getElementById("page6").addEventListener("click", () => {
 //     );
 // }
 
-let page5= document.getElementById("page5");
-page5.addEventListener("mouseover", ()=>{
-    pluse1.style.transform="rotate(0deg)";
-    pluse2.style.transform="rotate(0deg)";
-    pluse3.style.transform="rotate(0deg)";
-    pluse4.style.transform="rotate(0deg)";
-    pluse5.style.transform="rotate(0deg)";
-    projectPage1.style.transform="translateX(-100rem)";
-    projectPage2.style.transform="translateX(-100rem)";
-    projectPage3.style.transform="translateX(-100rem)";
-    projectPage4.style.transform="translateX(-100rem)";
-    projectPage5.style.transform="translateX(-100rem)";
-})
+
 
 let userName= document.getElementById("name").value;
 
@@ -565,149 +556,54 @@ function sendEmail(){
 
 // starting loading screen----------------------------------------
 
-// document.getElementById("mainLoader").style.transform="scale(1)";
-// setTimeout(()=>{
-//     document.getElementById("mainLoader").style.transform="scale(0)";
-//     // document.getElementById("main").style.display="block";
-//     pageAnimation();
-// },2300)
-// setTimeout(()=>{
-//     document.getElementById("mainLoader").style.display="none";
-//     document.getElementById("socialbar").style.display="block";
-// },3000)
-let rotateFlag1=false;
-let rotateFlag2=false;
-let rotateFlag3=false;
-let rotateFlag4=false;
-let rotateFlag5=false;
-let pluse1=document.getElementById("rotatePluse1");
-let pluse2=document.getElementById("rotatePluse2");
-let pluse3=document.getElementById("rotatePluse3");
-let pluse4=document.getElementById("rotatePluse4");
-let pluse5=document.getElementById("rotatePluse5");
-let projectPage1=document.getElementById("tictactoeInfo");
-let projectPage2=document.getElementById("typingGameInfo")
-let projectPage3=document.getElementById("taskManagerInfo")
-let projectPage4=document.getElementById("movieDeckInfo")
-let projectPage5=document.getElementById("logPage");
 
-function rotate5(){
-    if(rotateFlag5===false){
-        rotateFlag5=true;
-        pluse5.style.transform="rotate(135deg)";
-        projectPage5.style.transform="translateX(0rem)";
-        pluse1.style.transform="rotate(0deg)";
-        pluse2.style.transform="rotate(0deg)";
-        pluse3.style.transform="rotate(0deg)";
-        pluse4.style.transform="rotate(0deg)";
-        projectPage1.style.transform="translateX(-100rem)";
-        projectPage2.style.transform="translateX(-100rem)";
-        projectPage3.style.transform="translateX(-100rem)";
-        projectPage4.style.transform="translateX(-100rem)";
-        rotateFlag1=false;
-        rotateFlag2=false;
-        rotateFlag3=false;
-        rotateFlag4=false;
+// let rotateFlag1=false;
+// let rotateFlag2=false;
+// let rotateFlag3=false;
+// let rotateFlag4=false;
+// let rotateFlag5=false;
+// let pluse1=document.getElementById("rotatePluse1");
+// let pluse2=document.getElementById("rotatePluse2");
+// let pluse3=document.getElementById("rotatePluse3");
+// let pluse4=document.getElementById("rotatePluse4");
+// let pluse5=document.getElementById("rotatePluse5");
+let projectPage1=document.getElementById("logPage");
+let projectPage2=document.getElementById("tictactoeInfo")
+let projectPage3=document.getElementById("typingGameInfo")
+let projectPage4=document.getElementById("taskManagerInfo")
+let projectPage5=document.getElementById("movieDeckInfo");
+let projectPage6=document.getElementById("beyoungInfo");
+
+let allProjectIds=["logPage","tictactoeInfo","typingGameInfo","taskManagerInfo","movieDeckInfo","beyoungInfo"];
+let allPlusArrow=["rotatePluse1","rotatePluse2","rotatePluse3","rotatePluse4","rotatePluse5","rotatePluse6"];
+let prevId="";
+function rotatePlus(event){
+    if(event.target.id != prevId){
+        prevId=event.target.id;
+        allProjectIds.forEach((val)=>{
+            document.getElementById(val).style.transform="translateX(-100rem)";
+        });
+        allPlusArrow.forEach((val)=>{
+            document.getElementById(val).style.transform="rotate(0deg)";
+        });
+        allPlusArrow.forEach((val,index)=>{
+            if(val === event.target.id){
+                document.getElementById(event.target.id).style.transform="rotate(135deg)";
+                document.getElementById(allProjectIds[index]).style.transform="translateX(0rem)";
+            }
+        })
     }
     else{
-        rotateFlag5=false
-        pluse5.style.transform="rotate(0deg)";
-        projectPage5.style.transform="translateX(-100rem)";
+        prevId="";
+        allProjectIds.forEach((val)=>{
+            document.getElementById(val).style.transform="translateX(-100rem)";
+        });
+        allPlusArrow.forEach((val)=>{
+            document.getElementById(val).style.transform="rotate(0deg)";
+        });
     }
+    
+
 }
-function rotate1(){
-    if(rotateFlag1===false){
-        rotateFlag1=true;
-        pluse1.style.transform="rotate(135deg)";
-        projectPage1.style.transform="translateX(0rem)";
-        pluse2.style.transform="rotate(0deg)";
-        pluse3.style.transform="rotate(0deg)";
-        pluse4.style.transform="rotate(0deg)";
-        pluse5.style.transform="rotate(0deg)";
-        projectPage2.style.transform="translateX(-100rem)";
-        projectPage3.style.transform="translateX(-100rem)";
-        projectPage4.style.transform="translateX(-100rem)";
-        projectPage5.style.transform="translateX(-100rem)";
-        rotateFlag2=false;
-        rotateFlag3=false;
-        rotateFlag4=false;
-        rotateFlag5=false;
-    }
-    else{
-        rotateFlag1=false
-        pluse1.style.transform="rotate(0deg)";
-        projectPage1.style.transform="translateX(-100rem)";
-    }
-}
-function rotate2(){
-    if(rotateFlag2===false){
-        rotateFlag2=true;
-        pluse2.style.transform="rotate(135deg)";
-        projectPage2.style.transform="translateX(0rem)";
-        pluse1.style.transform="rotate(0deg)";
-        pluse3.style.transform="rotate(0deg)";
-        pluse4.style.transform="rotate(0deg)";
-        pluse5.style.transform="rotate(0deg)";
-        projectPage1.style.transform="translateX(-100rem)";
-        projectPage3.style.transform="translateX(-100rem)";
-        projectPage4.style.transform="translateX(-100rem)";
-        projectPage4.style.transform="translateX(-100rem)";
-        rotateFlag1=false;
-        rotateFlag3=false;
-        rotateFlag4=false;
-        rotateFlag5=false;
-    }
-    else{
-        rotateFlag2=false
-        pluse2.style.transform="rotate(0deg)";
-        projectPage2.style.transform="translateX(-100rem)";
-    }
-}
-function rotate3(){
-    if(rotateFlag3===false){
-        rotateFlag3=true;
-        pluse3.style.transform="rotate(135deg)";
-        projectPage3.style.transform="translateX(0rem)";
-        pluse1.style.transform="rotate(0deg)";
-        pluse2.style.transform="rotate(0deg)";
-        pluse4.style.transform="rotate(0deg)";
-        pluse5.style.transform="rotate(0deg)";
-        projectPage1.style.transform="translateX(-100rem)";
-        projectPage2.style.transform="translateX(-100rem)";
-        projectPage4.style.transform="translateX(-100rem)";
-        projectPage5.style.transform="translateX(-100rem)";
-        rotateFlag1=false;
-        rotateFlag2=false;
-        rotateFlag4=false;
-        rotateFlag5=false;
-    }
-    else{
-        rotateFlag3=false
-        pluse3.style.transform="rotate(0deg)";
-        projectPage3.style.transform="translateX(-100rem)";
-    }
-}
-function rotate4(){
-    if(rotateFlag4===false){
-        rotateFlag4=true;
-        pluse4.style.transform="rotate(135deg)";
-        projectPage4.style.transform="translateX(0rem)";
-        pluse1.style.transform="rotate(0deg)";
-        pluse2.style.transform="rotate(0deg)";
-        pluse3.style.transform="rotate(0deg)";
-        pluse5.style.transform="rotate(0deg)";
-        projectPage1.style.transform="translateX(-100rem)";
-        projectPage2.style.transform="translateX(-100rem)";
-        projectPage3.style.transform="translateX(-100rem)";
-        projectPage5.style.transform="translateX(-100rem)";
-        rotateFlag1=false;
-        rotateFlag2=false;
-        rotateFlag3=false;
-        rotateFlag5=false;
-    }
-    else{
-        rotateFlag4=false
-        pluse4.style.transform="rotate(0deg)";
-        projectPage4.style.transform="translateX(-100rem)";
-    }
-}
+
+

@@ -666,10 +666,10 @@ html,body{
     color: black;
     cursor: pointer;
 }
-#showMoreIcon{
+.showMoreIcon{
     height: fit-content;
     margin-bottom: 3px;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: 200;
     font-family: "General Sans Medium";
     cursor: pointer;
@@ -729,7 +729,7 @@ html,body{
 .elemlast{
     border-bottom: 1px solid #888;
 }
-#logPage{
+#logPage,#tictactoeInfo,#typingGameInfo,#taskManagerInfo,#movieDeckInfo,#beyoungInfo{
     position: absolute;
     background-color: black;
     width: 80%;
@@ -740,53 +740,7 @@ html,body{
     /* min-height: 9.8rem; */
     z-index: 2;
 }
-#tictactoeInfo{
-    position: absolute;
-    background-color: black;
-    width: 80%;
-    transform: translateX(-100rem);
-    transition: .8s;
-    font-size: 1vw;
-    padding: 1rem 2rem;
-    /* min-height: 9.8rem; */
-    z-index: 2;
-    /* border-top: 1px solid #888;
-    border-bottom: 1px solid #888; */
-}
-#typingGameInfo{
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    width: 80%;
-    transform: translateX(-100rem);
-    transition: .8s;
-    font-size: 1vw;
-    padding: 1rem 2rem;
-    /* min-height: 9.8rem; */
-    /* height:inherit; */
-    z-index: 2;
-}
-#taskManagerInfo{
-    position: absolute;
-    background-color:black;
-    width: 80%;
-    transform: translateX(-100rem);
-    transition: .8s;
-    padding: 1rem 2rem;
-    font-size: 1vw;
-    /* min-height: 9.8rem; */
-    z-index: 2;
-}
-#movieDeckInfo{
-    position: absolute;
-    background-color: black;
-    width: 80%;
-    transform: translateX(-100rem);
-    transition: .8s;
-    padding: 1rem 2rem;
-    font-size: 1vw;
-    /* min-height: 9.8rem; */
-    z-index: 2;
-}
+
 
 /* --------------------------Page5------------------------ */
 
@@ -1140,9 +1094,9 @@ html,body{
     }
 }
 @media ( min-width:521px) and (max-width: 678px){
-    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+    /* #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
         display: none;
-    }
+    } */
     .projectelements{
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -1375,7 +1329,7 @@ html,body{
 
     #page4{
         padding: 2rem;
-        
+        margin-bottom: 9rem;
     }
     .projectelements{
         padding-top: 2rem;
@@ -1388,8 +1342,30 @@ html,body{
     .projectelements img{
         display: none;
     }
-    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+    /* #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
         display: none;
+    } */
+    .showMoreIcon{
+        height: fit-content;
+        margin-bottom: 3px;
+        font-size: 1.35rem;
+        font-weight: 200;
+        font-family: "General Sans Medium";
+        cursor: pointer;
+        /* margin: 0 !important; */
+    }
+    #logPage,#tictactoeInfo,#typingGameInfo,#taskManagerInfo,#movieDeckInfo,#beyoungInfo{
+        position: absolute;
+        top: 0rem;
+        border: 1px solid green;
+        left: 0;
+        background-color: black;
+        width: 89%;
+        transform: translateX(-100rem);
+        transition: .8s;
+        padding: 1rem .5rem;
+        font-size: 4vw;
+        z-index: 2;
     }
     #page5{
         padding: 2rem 0;
