@@ -1345,10 +1345,18 @@ html,body{
     /* #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
         display: none;
     } */
+    .moreAboutProject{
+        border: none;
+    }
+    .moreAboutProject:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
     .showMoreIcon{
         height: fit-content;
         margin-bottom: 3px;
-        font-size: 1.35rem;
+        font-size: 1.5rem;
         font-weight: 200;
         font-family: "General Sans Medium";
         cursor: pointer;
