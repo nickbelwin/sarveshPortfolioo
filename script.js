@@ -271,12 +271,8 @@ skill3.addEventListener("mouseleave", () => {
 });
 skill4.addEventListener("mouseenter", () => {
     on4.classList.add("skill_hover");
-    on4.innerHTML = `<p>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
-    It is easy to learn and simple to use
-    It is open-source and free
-    It is secure, fast and powerful
-    It has a huge community support (tens of millions of developers)</p>
-    <img src="./media/java.png" alt="">`;
+    on4.innerHTML = `<p> React is a JavaScript-based UI development library. Although React is a library rather than a language, it is widely used in web development.</p>
+    <img src="https://www.pngitem.com/pimgs/m/664-6644509_icon-react-js-logo-hd-png-download.png" alt="">`;
 });
 skill4.addEventListener("mouseleave", () => {
     on4.classList.remove("skill_hover");
@@ -567,15 +563,14 @@ function sendEmail(){
 // let pluse3=document.getElementById("rotatePluse3");
 // let pluse4=document.getElementById("rotatePluse4");
 // let pluse5=document.getElementById("rotatePluse5");
-let projectPage1=document.getElementById("logPage");
-let projectPage2=document.getElementById("tictactoeInfo")
-let projectPage3=document.getElementById("typingGameInfo")
-let projectPage4=document.getElementById("taskManagerInfo")
-let projectPage5=document.getElementById("movieDeckInfo");
-let projectPage6=document.getElementById("beyoungInfo");
-
-let allProjectIds=["logPage","tictactoeInfo","typingGameInfo","taskManagerInfo","movieDeckInfo","beyoungInfo"];
-let allPlusArrow=["rotatePluse1","rotatePluse2","rotatePluse3","rotatePluse4","rotatePluse5","rotatePluse6"];
+// let projectPage1=document.getElementById("logPage");
+// let projectPage2=document.getElementById("tictactoeInfo");
+// let projectPage3=document.getElementById("typingGameInfo");
+// let projectPage4=document.getElementById("taskManagerInfo");
+// let projectPage5=document.getElementById("movieDeckInfo");
+// let projectPage6=document.getElementById("beyoungInfo");
+let allProjectIds=["logPage","typingGameInfo","taskManagerInfo","movieDeckInfo","beyoungInfo"];
+let allPlusArrow=["rotatePluse1","rotatePluse3","rotatePluse4","rotatePluse5","rotatePluse6"];
 let prevId="";
 function rotatePlus(event){
     if(event.target.id != prevId){
