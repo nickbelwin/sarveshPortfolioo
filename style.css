@@ -1026,6 +1026,9 @@ html,body{
         width: 60%;
         margin-bottom: 7rem;
     }
+    .moreAboutProject{
+        border: none;
+    }
     /* .inner-cursor{
         display: none;
     }
@@ -1094,9 +1097,9 @@ html,body{
     }
 }
 @media ( min-width:521px) and (max-width: 678px){
-    /* #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5,#rotatePluse6{
         display: none;
-    } */
+    }
     .projectelements{
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -1342,9 +1345,9 @@ html,body{
     .projectelements img{
         display: none;
     }
-    /* #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5{
+    #rotatePluse1,#rotatePluse2,#rotatePluse3,#rotatePluse4,#rotatePluse5,#rotatePluse6{
         display: none;
-    } */
+    }
     .moreAboutProject{
         border: none;
     }

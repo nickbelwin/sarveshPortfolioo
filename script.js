@@ -354,22 +354,22 @@ document.querySelectorAll(".projectelements").forEach(function (elem) {
 //     window.location.href = "https://nickbelwin.github.io/spotifyclone";
 // });
 document.getElementById("loginpage").addEventListener("click", (e) => {
-    window.location.href = "https://nickbelwin.github.io/spotifyclone/html/loginPage.html";
+    window.open("https://nickbelwin.github.io/spotifyclone/html/loginPage.html","_blank");
 });
 document.getElementById("typingGame").addEventListener("click", (e) => {
-    window.location.href = "https://nickbelwin.github.io/typingGame/";
+    window.open("https://nickbelwin.github.io/typingGame/","_blank");
 });
 document.getElementById("tictactoe").addEventListener("click", (e) => {
-    window.location.href = "https://nickbelwin.github.io/TicTacToeGame/";
+    window.open("https://nickbelwin.github.io/TicTacToeGame/","_blank");
 });
 document.getElementById("taskManager").addEventListener("click", (e) => {
-    window.location.href = "https://nickbelwin.github.io/Task-Manager-App---Javascript-Project---adumymr7rrtu/";
+    window.open("https://nickbelwin.github.io/Task-Manager-App---Javascript-Project---adumymr7rrtu/","_blank");
 });
 document.getElementById("movieDeck").addEventListener("click", (e) => {
-    window.location.href = "https://nickbelwin.github.io/Movie-Deck-Project-Buidling---JS-Project-Building-Session-HTML-CSS---In-Cla---y04lgd7b2xpx/";
+    window.open("https://nickbelwin.github.io/Movie-Deck-Project-Buidling---JS-Project-Building-Session-HTML-CSS---In-Cla---y04lgd7b2xpx/","_blank");
 });
 document.getElementById("beyoungApp").addEventListener("click", (e) => {
-    window.location.href = "https://beyoung-store-clone-react-project-1-jnteolvro757.vercel.app/";
+    window.open("https://beyoung-store-clone-react-project-1-jnteolvro757.vercel.app/", "_blank");
 });
 document.getElementById("page1").addEventListener("click", () => {
     flagdrop = true;
